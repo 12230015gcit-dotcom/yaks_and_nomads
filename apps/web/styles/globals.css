@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Seasons", Georgia, "Times New Roman", serif;
+  --font-serif: Georgia, "Times New Roman", "Noto Serif", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-seasons: "Seasons", Georgia, "Times New Roman", serif;
+
+  --animate-hero-zoom: hero-zoom 10s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-ken-burns: ken-burns 8s ease-out both;
+  --animate-zoom-out-fade: zoom-out-fade 1.5s ease-out both;
+  --animate-zoom-in-fade: zoom-in-fade 1.5s ease-in both;
+  --animate-tagline-in: tagline-in 2.7s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+  --animate-tagline-out: tagline-out 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-out: fadeOut 1.5s ease-out forwards;
+  --animate-fade-in: fadeIn 0.7s linear both;
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08) translateZ(0);
+  }
+  to {
+    transform: scale(1.18) translateZ(0);
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1) translateZ(0);
+  }
+  to {
+    transform: scale(1.08) translateZ(0);
+  }
+}
+
+@keyframes zoom-out-fade {
+  0% {
+    transform: scale(1.08) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-in-fade {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tagline-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tagline-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+}
+
+@font-face {
+  font-family: "Seasons";
+  src: url("/fonts/Seasons/The Seasons Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes carousel-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-zoom {
+    animation: none;
+  }
+
+  .animate-ken-burns {
+    animation: none;
+  }
+
+  .animate-zoom-out-fade {
+    animation: none;
+    opacity: 0;
+  }
+
+  .animate-zoom-in-fade {
+    animation: none;
+    opacity: 1;
+  }
+
+  .animate-tagline-in {
+    animation: tagline-fade-in 0.2s ease both;
+  }
+
+  .animate-tagline-out {
+    animation: tagline-fade-out 0.2s ease both;
+  }
+
+  @keyframes tagline-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes tagline-fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
