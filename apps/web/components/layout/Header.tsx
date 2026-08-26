@@ -38,7 +38,7 @@ export default function Header() {
           className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
         >
           <img
-            src="/images/logo/Transparent.png"
+            src="/fonts/images/logo/Transparent.webp"
             alt="Yaks & Nomads"
             className={`h-full w-auto max-w-[30vw] sm:max-w-none object-contain transition-[opacity,transform] duration-500 motion-reduce:transition-none ${
               scrolled ? "opacity-0 scale-90" : "opacity-100 scale-100"
