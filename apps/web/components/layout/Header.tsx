@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import NavigationDrawer from "@/components/common/NavigationDrawer";
-// Import Next.js Image component
-import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,13 +37,9 @@ export default function Header() {
           aria-label="Yaks & Nomads home"
           className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
         >
-          {/* Replaced <img> with Next.js <Image /> */}
-          <Image
-            src="/fonts/images/logo/logo1.webp"
+          <img
+            src="/images/logo/Transparent.png"
             alt="Yaks & Nomads"
-            width={300} // Add reasonable base dimensions
-            height={100} // Next.js requires width/height for layout calculation
-            priority // Forces the logo to load instantly without lazy-load delays
             className={`h-full w-auto max-w-[30vw] sm:max-w-none object-contain transition-[opacity,transform] duration-500 motion-reduce:transition-none ${
               scrolled ? "opacity-0 scale-90" : "opacity-100 scale-100"
             }`}
