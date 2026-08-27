@@ -64,19 +64,18 @@ export default function NavigationDrawer({ isOpen, onClose }: NavigationDrawerPr
         }`}
         onClick={onClose}
       />
+      <button
+        onClick={onClose}
+        className="fixed top-3 sm:top-4 md:top-6 left-4 sm:left-6 md:left-[130px] p-2 z-[110] text-[#5B3231] hover:opacity-70 transition-colors"
+        aria-label="Close menu"
+      >
+        <X className="w-6 h-6 md:w-7 md:h-7" />
+      </button>
       <div
         className={`relative z-[101] w-[85vw] max-w-sm bg-[#fcfbfa] h-full shadow-2xl transition-transform duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
-          shown ? 'translate-x-0' : '-translate-x-full'
+          shown ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <button
-          onClick={onClose}
-          className="fixed top-3 sm:top-4 md:top-5 left-4 sm:left-6 md:left-8 z-20 p-3 text-[#8B5A52] hover:opacity-70 transition-opacity focus:outline-none"
-          aria-label="Close menu"
-        >
-          <X className="w-8 h-8 stroke-[1.25]" />
-        </button>
-
         <div className="absolute inset-0 flex flex-col px-10 md:px-14" style={{ paddingTop: '188px' }}>
           <Link
             href="/"

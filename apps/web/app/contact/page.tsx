@@ -76,6 +76,7 @@ function StyledTextarea({ label, bracket, ...props }: { label: string; bracket: 
         onBlur={(e) => { setFocused(false); props.onBlur?.(e); }}
         className="w-full bg-transparent text-slate-800 focus:outline-none resize-none font-serif"
         style={{ fontFamily: 'var(--font-merriweather), serif' }}
+        suppressHydrationWarning
       />
     </div>
   );
@@ -200,7 +201,7 @@ function ContactFormContent() {
   };
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#fcfbfa] text-slate-800">
+    <section className="py-24 px-6 md:px-[130px] text-black/80">
       {modal && (
         <div className="fixed inset-0 z-[300] flex items-center justify-center px-6">
           <div className="absolute inset-0 bg-black/50" onClick={() => setModal(null)} />
@@ -213,14 +214,14 @@ function ContactFormContent() {
             <h3 className="text-[24px] leading-tight mb-3" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: '#5B3231' }}>
               {modal.type === 'incomplete' ? 'Form Incomplete' : 'Check Your Details'}
             </h3>
-            <p className="font-serif text-[14px] leading-relaxed text-slate-600 mb-6" style={{ fontFamily: 'var(--font-seasons), serif' }}>
+            <p className="font-serif text-[14px] leading-relaxed text-black/70 mb-6" style={{ fontFamily: 'var(--font-seasons), serif' }}>
               {modal.type === 'incomplete'
                 ? `Your form is incomplete. Please fill in: ${modal.detail}.`
                 : `Please correct the following before sending: ${modal.detail}.`}
             </p>
             <button
               onClick={() => setModal(null)}
-              className="rounded-full bg-[#8B5A52] text-white text-xs uppercase tracking-widest px-8 py-3 hover:bg-[#592A22] transition-colors"
+              className="rounded-full text-white text-xs uppercase tracking-widest px-8 py-3 hover:bg-[#592A22] transition-colors"
             >
               OK
             </button>
@@ -229,7 +230,7 @@ function ContactFormContent() {
       )}
       <div className="max-w-3xl mx-auto space-y-12">
         <FadeIn>
-          <h2 className="font-serif text-[26px] text-slate-900 font-normal" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
+          <h2 className="font-serif text-[26px] text-black/80 font-normal" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
             {tripParam ? `Enquiry: ${tripParam}` : 'Contact Us Now'}
           </h2>
         </FadeIn>
@@ -237,7 +238,7 @@ function ContactFormContent() {
         {status === 'submitted' ? (
           <FadeIn className="bg-white p-8 md:p-12 rounded-lg border border-slate-200 shadow-sm text-center space-y-6">
             <div className="space-y-2">
-              <h3 className="font-serif text-2xl text-slate-900 font-semibold">Message Sent</h3>
+              <h3 className="font-serif text-2xl text-black/80 font-semibold">Message Sent</h3>
             </div>
             <button
               onClick={() => {
@@ -317,6 +318,7 @@ function ContactFormContent() {
                   type="submit"
                   disabled={status === 'submitting'}
                   className="rounded-full border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-8 py-3 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 disabled:opacity-50"
+                  suppressHydrationWarning
                 >
                   {status === 'submitting' ? 'Sending Message...' : 'Send Message'}
                 </button>
@@ -332,11 +334,11 @@ function ContactFormContent() {
 // --- Contact Page Entry Point ---
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 antialiased selection:bg-[#8B5A52] selection:text-white">
+    <div className="min-h-screen bg-white text-black/80 antialiased selection:bg-[#8B5A52] selection:text-white">
       <Header />
       <main>
         <ContactHero />
-        <Suspense fallback={<div className="py-24 text-center font-serif text-slate-500">Loading form...</div>}>
+        <Suspense fallback={<div className="py-24 text-center font-serif black/70">Loading form...</div>}>
           <ContactFormContent />
         </Suspense>
       </main>

@@ -6,6 +6,29 @@ import FadeIn from '@/components/common/FadeIn';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const ABOUT_IMAGES = [
+  '/fonts/images/AboutUsHero.webp',
+  '/fonts/images/localpersonalefficient.webp',
+  '/fonts/images/logo/White%20Transparent.webp',
+  '/fonts/images/person/IMG_8823.JPG.webp',
+  '/fonts/images/person/Dorji%20Pelzang.webp',
+  '/fonts/images/person/Karma%20Tshewang.jpg.webp',
+  '/fonts/images/person/Karma%20Dechen_1.webp',
+  '/fonts/images/person/Rinchen%20Dorji%20.webp',
+  '/fonts/images/person/Rinzin%20Tsheten%20.webp',
+  '/fonts/images/person/Yonten%20Wangchuk.webp',
+  '/fonts/images/person/Ugyen%20Wangchuk.webp',
+  '/fonts/images/Work%20with%20Us_1.webp',
+  '/fonts/images/Work%20with%20Us.webp',
+];
+
+function preloadImages(srcs: string[]) {
+  srcs.forEach((src) => {
+    const img = new window.Image();
+    img.src = src;
+  });
+}
+
 // --- Section 1: About Hero ---
 function AboutHero() {
   return (
@@ -27,18 +50,18 @@ function AboutHero() {
 // --- Section 2: The Heart of Yaks & Nomads ---
 function HeartSection() {
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#fcfbfa] text-slate-800">
+    <section className="py-24 px-6 md:px-[130px] text-slate-800">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-stretch">
         {/* Left Column: Text */}
         <FadeIn className="lg:col-span-6 space-y-6">
-          <span className="text-[20px] uppercase tracking-widest text-[#8B5A52] font-semibold font-sans" style={{ fontFamily: 'var(--font-seasons), serif' }}>
+          <span className="text-[20px] uppercase tracking-widest text-[#5B3231]/80 font-semibold font-sans" style={{ fontFamily: 'var(--font-seasons), serif' }}>
             LOCAL. PERSONAL. EFFICIENT.
           </span>
-          <h2 className="font-serif text-[32px] text-slate-900 leading-tight" style={{ fontFamily: 'var(--font-seasons), serif' }}>
+          <h2 className="font-serif text-[32px] text-black/80 leading-tight" style={{ fontFamily: 'var(--font-seasons), serif' }}>
             The Heart of <br /> Yaks & Nomads
           </h2>
 
-          <div className="space-y-4 text-[16px] text-slate-600 leading-relaxed pt-2" style={{ fontFamily: 'var(--font-merriweather), serif' }}>
+          <div className="space-y-4 text-[16px] text-black/70 leading-relaxed pt-2" style={{ fontFamily: 'var(--font-merriweather), serif' }}>
             <p>
               Yaks & Nomads was born with a big heart and a clear purpose to create meaningful travel experiences that truly benefit the people and places we are connected to.
             </p>
@@ -64,7 +87,6 @@ function HeartSection() {
               src="/fonts/images/localpersonalefficient.webp"
               alt="Bhutanese Nomad"
               className="w-full h-full object-cover"
-              loading="lazy"
               decoding="async"
             />
           </div>
@@ -87,14 +109,14 @@ function HeartSection() {
 // --- Section 3: CEO Profile ---
 function CeoSection() {
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#D9D9D9] text-slate-800">
+    <section className="py-24 px-6 md:px-[130px] bg-[#D9D9D9] text-slate-800">
       <div className="max-w-7xl mx-auto space-y-12">
         <FadeIn>
-          <h2 className="font-serif text-[32px] text-slate-900" style={{ fontFamily: 'var(--font-seasons), serif' }}>
+          <h2 className="font-serif text-[32px] text-black/80" style={{ fontFamily: 'var(--font-seasons), serif' }}>
             Tsheten Chophel
           </h2>
-          <span className="text-[20px] uppercase tracking-widest text-[#8B5A52] font-semibold font-sans mt-1 block" style={{ fontFamily: 'var(--font-seasons), serif' }}>
-            Founder &amp; CEO
+          <span className="text-[20px] uppercase tracking-widest text-[#8B5A52]/80 font-semibold font-sans mt-1 block" style={{ fontFamily: 'var(--font-seasons), serif' }}>
+            CEO
           </span>
         </FadeIn>
 
@@ -116,11 +138,7 @@ function CeoSection() {
           <FadeIn delay={150} className="lg:col-span-7 text-[16px] text-slate-700 leading-relaxed">
             <div className="space-y-5" style={{ fontFamily: 'var(--font-merriweather), serif' }}>
               <p>
-                Sending Tsheten to school was the furthest thing from his mother's mind. As the youngest of seven siblings, he was naturally the most cherished, and his late mother found it difficult to imagine being away from him. However, his brothers, who had missed the opportunity for education themselves, were determined that he should not face the same fate. With their encouragement, he was enrolled in a boarding school that required a three-hour trek from his village.
-              </p>
-              <p>
-                Life as a six-year-old in a boarding school was incredibly challenging.
-              </p>
+              Sending Tsheten to school was the furthest thing from his mother’s mind. As the youngest of seven siblings, he was naturally the most cherished, and his late mother found it difficult to imagine being away from him. However, his brothers, who had missed the opportunity for education themselves, were determined that he should not face the same fate. With their encouragement, he was enrolled in a boarding school that required a three-hour trek from his village</p>
               <p>
                 His love for adventure dates back to his formative years. As a child, he was fascinated by the tourists who visited his hometown—a remote corner in eastern Bhutan and a renowned birding haven known for hornbills and many other species. This early exposure sparked his passion for guiding.
               </p>
@@ -151,10 +169,10 @@ function AmbassadorsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#fcfbfa]">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start">
+    <section className="py-24 px-6 md:px-[130px] bg-[#fcfbfa]">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text */}
-        <FadeIn className="lg:col-span-4 space-y-4">
+        <FadeIn className="lg:col-span-4 space-y-4 flex flex-col justify-center h-full">
           <h2 className="font-serif text-[32px] text-slate-900 leading-tight" style={{ fontFamily: 'var(--font-seasons), serif' }}>
             Meet <br />
             Our <br />
@@ -231,7 +249,7 @@ function PartnerSection() {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#D9D9D9] text-slate-800">
+    <section className="py-24 px-6 md:px-[130px] bg-[#D9D9D9] text-slate-800">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Composition Images */}
@@ -315,6 +333,10 @@ function PartnerSection() {
 
 // --- Main About Page Entry Point ---
 export default function AboutPage() {
+  useEffect(() => {
+    preloadImages(ABOUT_IMAGES);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased selection:bg-[#8B5A52] selection:text-white">
       <Header />

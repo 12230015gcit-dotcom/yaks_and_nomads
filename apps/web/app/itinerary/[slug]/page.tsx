@@ -6,6 +6,13 @@ import FadeIn from '@/components/common/FadeIn';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+function preloadImages(srcs: string[]) {
+  srcs.forEach((src) => {
+    const img = new window.Image();
+    img.src = src;
+  });
+}
+
 const TOURS = [
   {
     slug: 'royal-highland-festival',
@@ -245,8 +252,19 @@ export default function TourDetailPage({ params }: { params: Promise<{ slug: str
 
   const otherTours = TOURS.filter((t) => t.slug !== tour.slug);
 
+  useEffect(() => {
+    const images = [
+      tour.heroImage,
+      ...tour.galleryImages.map((i) => i.src),
+      ...tour.featureImages.map((i) => i.src),
+      ...tour.itinerarySidebarImages.map((i) => i.src),
+      ...otherTours.map((t) => t.heroImage),
+    ];
+    preloadImages(images);
+  }, [tour, otherTours]);
+
   return (
-    <div className="min-h-screen bg-white text-slate-900 antialiased selection:bg-[#8B5A52] selection:text-white">
+    <div className="min-h-screen bg-white text-black/80 antialiased selection:bg-[#8B5A52] selection:text-white">
       <Header />
       <main>
         <ItineraryHero title={tour.title} image={tour.heroImage} />
@@ -277,7 +295,7 @@ function ItineraryHero({ title, image }: { title: string; image: string }) {
 
 function TripOverviewSection({ tour }: { tour: typeof TOURS[number] }) {
   return (
-    <section className="py-20 px-6 md:px-16 bg-[#fcfbfa] text-slate-800 font-serif">
+    <section className="py-20 px-6 md:px-[130px] bg-[#fcfbfa] text-slate-800 font-serif">
       <div className="max-w-6xl mx-auto space-y-16">
         <FadeIn className="max-w-3xl ml-auto space-y-6 text-[18px] text-slate-700 leading-relaxed">
           <div style={{ fontFamily: 'var(--font-merriweather), Georgia, serif' }}>
@@ -305,18 +323,18 @@ function TripOverviewSection({ tour }: { tour: typeof TOURS[number] }) {
 
 function GallerySection({ images }: { images: typeof TOURS[number]['galleryImages'] }) {
   return (
-    <section className="py-12 px-6 md:px-16 bg-[#fcfbfa]">
+    <section className="py-12 px-6 md:px-[130px] bg-[#fcfbfa]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         <div className="space-y-6">
           <FadeIn className="overflow-hidden group">
-            <img src={images[0].src} alt={images[0].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[0].objectPosition || 'center' }} loading="lazy" decoding="async" />
+            <img src={images[0].src} alt={images[0].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[0].objectPosition || 'center' }}/>
           </FadeIn>
           <FadeIn className="overflow-hidden group">
-            <img src={images[1].src} alt={images[1].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[1].objectPosition || 'center' }} loading="lazy" decoding="async" />
+            <img src={images[1].src} alt={images[1].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[1].objectPosition || 'center' }}/>
           </FadeIn>
         </div>
         <FadeIn delay={150} className="overflow-hidden group">
-          <img src={images[2].src} alt={images[2].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[2].objectPosition || 'center' }} loading="lazy" decoding="async" />
+          <img src={images[2].src} alt={images[2].alt} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: images[2].objectPosition || 'center' }}/>
         </FadeIn>
       </div>
     </section>
@@ -325,7 +343,7 @@ function GallerySection({ images }: { images: typeof TOURS[number]['galleryImage
 
 function FeaturesGridSection({ features, featureImages }: { features: typeof TOURS[number]['features']; featureImages: typeof TOURS[number]['featureImages'] }) {
   return (
-    <section className="py-20 px-6 md:px-16 bg-[#fcfbfa] text-slate-800 font-serif border-t border-slate-100">
+    <section className="py-20 px-6 md:px-[130px] bg-[#fcfbfa] text-slate-800 font-serif border-t border-slate-100">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="md:w-2/3 ml-auto grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
           {features.map((item, i) => (
@@ -343,8 +361,6 @@ function FeaturesGridSection({ features, featureImages }: { features: typeof TOU
                 src={img.src}
                 alt={img.alt}
                 className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-115"
-                loading="lazy"
-                decoding="async"
                 style={img.style}
               />
             </FadeIn>
@@ -359,7 +375,7 @@ function ItineraryAccordionSection({ days, contactQuery, sidebarImages }: { days
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-black/60 text-white font-serif">
+    <section className="py-24 px-6 md:px-[130px] bg-black/60 text-white font-serif">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-7 space-y-6">
           <h2 className="text-2xl md:text-3xl text-white font-normal mb-8" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>Itinerary</h2>
@@ -395,8 +411,6 @@ function ItineraryAccordionSection({ days, contactQuery, sidebarImages }: { days
                 src={img.src}
                 alt={img.alt}
                 className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
                 style={img.style}
               />
             </div>
@@ -437,7 +451,7 @@ function OtherToursSection({ tours }: { tours: typeof TOURS }) {
   const gapCount = visibleCount - 1;
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#E3E1DC] text-slate-900 font-serif">
+    <section className="py-24 px-6 md:px-[130px] bg-[#E3E1DC] text-slate-900 font-serif">
       <div className="max-w-7xl mx-auto space-y-8">
         <h2 className="text-2xl md:text-3xl font-normal">Other Tours</h2>
         <div className="relative">
@@ -458,7 +472,7 @@ function OtherToursSection({ tours }: { tours: typeof TOURS }) {
                   className="relative group shrink-0 overflow-hidden"
                   style={{ width: `calc((100% - ${gapCount} * 1.5rem) / ${visibleCount})` }}
                 >
-                  <img src={tour.heroImage} alt={tour.title} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={tour.imagePosition ? { objectPosition: tour.imagePosition } : undefined} loading="lazy" decoding="async" />
+                  <img src={tour.heroImage} alt={tour.title} className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" style={tour.imagePosition ? { objectPosition: tour.imagePosition } : undefined}/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-[18px]">{tour.title}</h3>
@@ -467,7 +481,7 @@ function OtherToursSection({ tours }: { tours: typeof TOURS }) {
               ))}
             </div>
           </div>
-          <div className="flex gap-3 mt-6 justify-end">
+          <div className="flex gap-2 mt-15 justify-end">
             <button onClick={prev} aria-label="Previous tour" className="w-10 h-10 rounded-full border border-[#5B3231] bg-transparent text-[#5B3231] flex items-center justify-center hover:bg-[#5B3231] hover:text-white transition-[background-color,border-color,color] disabled:opacity-40 disabled:cursor-not-allowed" disabled={currentIndex === 0}>
               <ChevronLeft className="w-5 h-5" />
             </button>

@@ -187,10 +187,10 @@ function FaqAccordion({ items }: { items: FaqCategory['items'] }) {
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className="w-full flex items-center justify-between text-left font-serif text-[18px] focus:outline-none"
-              style={{ fontFamily: 'var(--font-merriweather), serif', color: 'rgba(91, 50, 49, 0.7)' }}
+              className="w-full flex items-center justify-between text-left font-serif text-[18px] text-[#5B3231]/50 focus:outline-none"
+              style={{ fontFamily: 'var(--font-merriweather), serif'}}
             >
-              <span className="pr-4">{item.question}</span>
+              <span className="pr-4 text-[#5B3231]/70">{item.question}</span>
               <span className="relative w-4 h-4 flex-shrink-0">
                 <Plus
                   className={`w-4 h-4 text-slate-500 absolute inset-0 transition-transform duration-300 ease-out ${
@@ -211,7 +211,7 @@ function FaqAccordion({ items }: { items: FaqCategory['items'] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="mt-3 text-[16px] text-slate-600 font-serif leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-merriweather), serif', color: 'rgba(0, 0, 0, 0.7)' }}>
+                <p className="mt-3 text-[16px] font-serif leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-merriweather), serif', color: 'rgba(0, 0, 0, 0.7)' }}>
                   {item.answer}
                 </p>
               </div>
@@ -246,7 +246,7 @@ function FaqSections() {
   }, []);
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#fcfbfa] text-slate-800">
+    <section className="py-24 px-6 md:px-[130px] text-black/80">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
         {/* Left Column — pinned slot, label swaps with active list */}
         <div className="hidden lg:block lg:col-span-5">
@@ -261,7 +261,7 @@ function FaqSections() {
                 <span className="text-[20px] font-semibold block text-[#5B3231]/80" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
                   {cat.number}
                 </span>
-                <h2 className="text-[32px] text-slate-900 leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: 'rgba(0, 0, 0, 0.8)' }}>
+                <h2 className="text-[32px] leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: 'rgba(0, 0, 0, 0.7)' }}>
                   {cat.title}
                 </h2>
               </div>
@@ -278,7 +278,7 @@ function FaqSections() {
                   <span className="text-[20px] font-semibold block text-[#5B3231]/80" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
                     {cat.number}
                   </span>
-                  <h2 className="text-[32px] text-slate-900 leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: 'rgba(0, 0, 0, 0.8)' }}>
+                  <h2 className="text-[32px] text-balck/70 leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif'}}>
                     {cat.title}
                   </h2>
                 </div>
@@ -295,20 +295,20 @@ function FaqSections() {
 // --- Section: Still Have Questions Box ---
 function SupportCalloutSection() {
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#D9D9D9] text-slate-800 text-center">
+    <section className="py-24 px-6 md:px-[130px] bg-[#D9D9D9] text-slate-800 text-center">
       <div className="max-w-3xl mx-auto">
         <div>
-          <h2 className="font-serif text-[20px] text-slate-900 font-normal" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
+          <h2 className="font-serif text-[32px] font-normal" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
             Still have questions?
           </h2>
 
-          <p className="font-serif text-[16px] text-slate-700 leading-relaxed max-w-xl mx-auto mt-10" style={{ fontFamily: 'var(--font-merriweather), serif', color: '#000000' }}>
+          <p className="font-serif text-[16px] leading-relaxed max-w-xl mx-auto mt-10" style={{ fontFamily: 'var(--font-merriweather), serif', color: '#000000' }}>
             If you cannot find answer to your question in our FAQ, you can always contact us.
             <br />
             We will answer to you shortly!
           </p>
 
-          <div className="pt-8 font-serif text-[16px] text-slate-700 space-y-2" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
+          <div className="pt-8 font-serif text-[16px] space-y-2" style={{ fontFamily: 'var(--font-seasons), serif', color: 'rgba(0, 0, 0, 0.8)' }}>
             <p>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@yaksandnomads.com" target="_blank" rel="noopener noreferrer">
                 hello@yaksandnomads.com
@@ -331,7 +331,7 @@ function SupportCalloutSection() {
 // --- FAQ Page Entry Point ---
 export default function FaqPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 antialiased selection:bg-[#8B5A52] selection:text-white">
+    <div className="min-h-screen bg-white text-black/80 antialiased selection:bg-[#8B5A52] selection:text-white">
       <Header />
       <main>
         <FaqHero />
