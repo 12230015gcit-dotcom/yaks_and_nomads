@@ -1,26 +1,24 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import FadeIn from '@/components/common/FadeIn';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 // --- FAQ Hero ---
 function FaqHero() {
   return (
-    <section className="relative h-[70vh] min-h-[480px] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/fonts/images/FaqHero.webp')" }}
       />
 
       <div className="relative z-10 px-6">
-        <FadeIn>
-          <h1 className="text-[66px] tracking-wide font-normal" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
-            FAQ
-          </h1>
-        </FadeIn>
+        <h1 className="text-[66px] tracking-wide font-normal" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
+          FAQ
+        </h1>
       </div>
     </section>
   );
@@ -205,17 +203,13 @@ function FaqAccordion({ items }: { items: FaqCategory['items'] }) {
               </span>
             </button>
 
-            <div
-              className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-opacity motion-reduce:duration-200 ${
-                isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-              }`}
-            >
-              <div className="overflow-hidden">
-                <p className="mt-3 text-[16px] font-serif leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-merriweather), serif', color: 'rgba(0, 0, 0, 0.7)' }}>
+            {isOpen && (
+              <div className="mt-3">
+                <p className="text-[16px] font-serif leading-relaxed whitespace-pre-line" style={{ fontFamily: 'var(--font-merriweather), serif', color: 'rgba(0, 0, 0, 0.7)' }}>
                   {item.answer}
                 </p>
               </div>
-            </div>
+            )}
           </div>
         );
       })}
@@ -223,70 +217,62 @@ function FaqAccordion({ items }: { items: FaqCategory['items'] }) {
   );
 }
 
-// --- All FAQ Categories: pinned label swaps as you scroll the lists ---
-function FaqSections() {
-  const [activeIdx, setActiveIdx] = useState(0);
-  const activeRef = useRef(0);
+// --- Drawer Reveal: slides up from bottom on scroll down, back down on scroll up ---
+function DrawerReveal({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          const idx = Number((entry.target as HTMLElement).dataset.idx);
-          if (entry.isIntersecting && idx !== activeRef.current) {
-            activeRef.current = idx;
-            setActiveIdx(idx);
-          }
-        }
-      },
-      { rootMargin: '-20% 0px -50% 0px', threshold: 0 }
-    );
-    document.querySelectorAll('[data-faq-list]').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'start 0.35'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ['100%', '0%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0.4, 1, 1]);
 
   return (
-    <section className="py-24 px-6 md:px-[130px] text-black/80">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
-        {/* Left Column — pinned slot, label swaps with active list */}
-        <div className="hidden lg:block lg:col-span-5">
-          <div className="sticky top-28 min-h-[140px]">
-            {FAQ_CATEGORIES.map((cat, idx) => (
-              <div
-                key={cat.number}
-                className={`absolute inset-0 space-y-3 transition-opacity duration-300 ease-out ${
-                  activeIdx === idx ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                <span className="text-[20px] font-semibold block text-[#5B3231]/80" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
-                  {cat.number}
-                </span>
-                <h2 className="text-[32px] leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: 'rgba(0, 0, 0, 0.7)' }}>
-                  {cat.title}
-                </h2>
-              </div>
-            ))}
-          </div>
-        </div>
+    <motion.div ref={ref} style={{ y, opacity }}>
+      {children}
+    </motion.div>
+  );
+}
 
-        {/* Right Column — the scrolling lists */}
-        <div className="lg:col-span-7 space-y-24">
-          {FAQ_CATEGORIES.map((cat, idx) => (
-            <div key={cat.number}>
-              <div data-faq-list data-idx={idx}>
-                <div className="lg:hidden space-y-3 mb-8">
+// --- All FAQ Categories: labels + accordion ---
+function FaqSections() {
+  return (
+    <section className="py-24 px-6 md:px-[130px] text-black/80">
+      <div className="max-w-6xl mx-auto space-y-24">
+        {FAQ_CATEGORIES.map((cat) => (
+          <DrawerReveal key={cat.number}>
+            <div className="grid lg:grid-cols-12 gap-12">
+              {/* Left Column — static labels */}
+              <div className="hidden lg:block lg:col-span-5">
+                <div className="space-y-3">
                   <span className="text-[20px] font-semibold block text-[#5B3231]/80" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
                     {cat.number}
                   </span>
-                  <h2 className="text-[32px] text-balck/70 leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif'}}>
+                  <h2 className="text-[32px] leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif', color: 'rgba(0, 0, 0, 0.7)' }}>
                     {cat.title}
                   </h2>
                 </div>
-                <FaqAccordion items={cat.items} />
+              </div>
+
+              {/* Right Column — the scrolling list */}
+              <div className="lg:col-span-7">
+                <div data-faq-list>
+                  <div className="lg:hidden space-y-3 mb-8">
+                    <span className="text-[20px] font-semibold block text-[#5B3231]/80" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
+                      {cat.number}
+                    </span>
+                    <h2 className="text-[32px] text-balck/70 leading-tight" style={{ fontFamily: 'var(--font-seasons), Georgia, serif'}}>
+                      {cat.title}
+                    </h2>
+                  </div>
+                  <FaqAccordion items={cat.items} />
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </DrawerReveal>
+        ))}
       </div>
     </section>
   );
@@ -342,6 +328,3 @@ export default function FaqPage() {
     </div>
   );
 }
-
-
-

@@ -32,7 +32,7 @@ function preloadImages(srcs: string[]) {
 // --- Section 1: About Hero ---
 function AboutHero() {
   return (
-    <section className="relative h-[70vh] min-h-[480px] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url('/fonts/images/AboutUsHero.webp')`, backgroundPosition: 'center calc(50% - 100px)' }}/>
 

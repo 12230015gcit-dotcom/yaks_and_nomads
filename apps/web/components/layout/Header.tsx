@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu } from 'lucide-react';
+import HamburgerButton from '@/components/common/HamburgerButton';
 import NavigationDrawer from '@/components/common/NavigationDrawer';
 
 export default function Header() {
@@ -17,20 +17,17 @@ export default function Header() {
 
   return (
     <>
-      {/* Base header - always visible, transparent */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled ? '-translate-y-full pointer-events-none' : 'translate-y-0'
         }`}
         style={{ transitionProperty: 'translate' }}
       >
-        <button
-          className="p-2 shrink-0 text-[#1C1B1F] hover:opacity-70 active:scale-95 transition-colors duration-300"
-          aria-label="Open menu"
+        <HamburgerButton
+          isOpen={menuOpen}
           onClick={() => setMenuOpen(true)}
-        >
-          <Menu className="w-6 h-6 md:w-7 md:h-7" />
-        </button>
+          scrolled={scrolled}
+        />
 
         <a href="/" aria-label="Yaks & Nomads home" className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14">
           <img
@@ -48,20 +45,17 @@ export default function Header() {
         </a>
       </header>
 
-      {/* Scrolled header - slides down from top */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 bg-white shadow-sm py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled ? 'translate-y-0' : '-translate-y-full'
         }`}
         style={{ transitionProperty: 'translate' }}
       >
-        <button
-          className="p-2 shrink-0 text-[#5B3231] hover:opacity-70 active:scale-95 transition-colors duration-300"
-          aria-label="Open menu"
+        <HamburgerButton
+          isOpen={menuOpen}
           onClick={() => setMenuOpen(true)}
-        >
-          <Menu className="w-6 h-6 md:w-7 md:h-7" />
-        </button>
+          scrolled
+        />
 
         <a href="/" aria-label="Yaks & Nomads home" className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14">
           <span

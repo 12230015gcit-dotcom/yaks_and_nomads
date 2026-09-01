@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "npm run dev --workspace=@yakn/web",
     "dev:server": "npm run dev --workspace=@yakn/server",
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspace=@yakn/web",
+    "start": "npm run start --workspace=@yakn/web",
     "lint": "npm run lint --workspaces",
     "test": "npm run test --workspaces",
     "format": "prettier --write ."
@@ -20,8 +21,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "run": "^2.0.0"
   }
 }

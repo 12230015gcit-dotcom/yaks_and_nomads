@@ -501,7 +501,7 @@ function FeaturedSection() {
               </p>
             </div>
 
-            <div className="space-y-3 text-center pt-10 md:pt-8 border-t border-white/20">
+            <div className="space-y-3 text-center pt-10 md:pt-8">
               <h3 className="font-serif text-[28px] text-white" style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}>
                 <a href="https://www.scmp.com/lifestyle/travel-leisure/article/3259043/bhutans-royal-highland-festival-colourful-high-altitude-mix-music-dance-and-sport" target="_blank" rel="noopener noreferrer" className="no-underline hover:text-white/80 transition-colors">
                   South China Morning Post
@@ -692,7 +692,7 @@ function ToursSection() {
       <section className="relative py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-serif select-none">
       <div 
         className="absolute top-1/2 -right-1 opacity-5 pointer-events-none"
-        style={{ transform: 'translateY(calc(-50% - 190px)) translateX(220px)' }}
+        style={{ transform: 'translateY(calc(-50% - 255px)) translateX(255px)' }}
       >
         <img
           src="/fonts/images/logo/logo_only.webp"

@@ -15,7 +15,7 @@ export default function Footer() {
             <img
               src="/fonts/images/logo/Logo_Small.webp"
               alt="Yaks & Nomads"
-              className="h-23 w-auto object-contain transition-all duration-300 hover:border-b-[1.5px] hover:border-r-[1.5px] hover:border-[#5B3231]"
+              className="h-23 w-auto object-contain transition-transform duration-300 hover:scale-105"
               loading="lazy"
               decoding="async"
             />

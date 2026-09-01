@@ -86,7 +86,7 @@ function StyledTextarea({ label, bracket, ...props }: { label: string; bracket: 
 // --- Section 1: Contact Hero ---
 function ContactHero() {
   return (
-    <section className="relative h-[80vh] min-h-[500px] bg-slate-900 flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] bg-slate-900 flex items-center justify-center text-center text-white overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('/fonts/images/ContactUsHero.webp')` }}

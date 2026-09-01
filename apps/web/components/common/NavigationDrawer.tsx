@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,6 +17,52 @@ const NAV_LINKS = [
   { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact Us' },
 ];
+
+function AnimatedCloseButton({ isOpen }: { isOpen: boolean }) {
+  return (
+    <svg
+      className="w-6 h-6 md:w-7 md:h-7"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <motion.line
+        x1="4"
+        y1="6"
+        x2="20"
+        y2="6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        animate={isOpen ? { x1: 5, y1: 7, x2: 19, y2: 19 } : { x1: 4, y1: 6, x2: 20, y2: 6 }}
+        transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+      />
+      <motion.line
+        x1="4"
+        y1="12"
+        x2="20"
+        y2="12"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+        transition={{ duration: 0.2 }}
+      />
+      <motion.line
+        x1="4"
+        y1="18"
+        x2="20"
+        y2="18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        animate={isOpen ? { x1: 5, y1: 19, x2: 19, y2: 7 } : { x1: 4, y1: 18, x2: 20, y2: 18 }}
+        transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+      />
+    </svg>
+  );
+}
 
 export default function NavigationDrawer({ isOpen, onClose }: NavigationDrawerProps) {
   const [present, setPresent] = useState(false);
@@ -47,7 +93,7 @@ export default function NavigationDrawer({ isOpen, onClose }: NavigationDrawerPr
     return () => window.removeEventListener('keydown', onKey);
   }, [present, onClose]);
 
-      if (!present) return null;
+  if (!present) return null;
 
   const overlay = (
     <div
@@ -64,13 +110,16 @@ export default function NavigationDrawer({ isOpen, onClose }: NavigationDrawerPr
         }`}
         onClick={onClose}
       />
-      <button
+      <motion.button
         onClick={onClose}
         className="fixed top-3 sm:top-4 md:top-6 left-4 sm:left-6 md:left-[130px] p-2 z-[110] text-[#5B3231] hover:opacity-70 transition-colors"
         aria-label="Close menu"
+        initial={{ x: 0 }}
+        animate={{ x: shown ? -72 : 0 }}
+        transition={{ duration: 0.2, ease: [0.25, 1, 0.5, 1] }}
       >
-        <X className="w-6 h-6 md:w-7 md:h-7" />
-      </button>
+        <AnimatedCloseButton isOpen={shown} />
+      </motion.button>
       <div
         className={`relative z-[101] w-[85vw] max-w-sm bg-[#fcfbfa] h-full shadow-2xl transition-transform duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
           shown ? "translate-x-0" : "-translate-x-full"
@@ -116,6 +165,3 @@ export default function NavigationDrawer({ isOpen, onClose }: NavigationDrawerPr
   if (typeof document === 'undefined') return overlay;
   return createPortal(overlay, document.body);
 }
-
-
-
