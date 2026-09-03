@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import HamburgerButton from '@/components/common/HamburgerButton';
-import NavigationDrawer from '@/components/common/NavigationDrawer';
+import React, { useState, useEffect } from "react";
+import HamburgerButton from "@/components/common/HamburgerButton";
+import NavigationDrawer from "@/components/common/NavigationDrawer";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,17 +11,17 @@ export default function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? '-translate-y-full pointer-events-none' : 'translate-y-0'
+          scrolled ? "-translate-y-full pointer-events-none" : "translate-y-0"
         }`}
-        style={{ transitionProperty: 'translate' }}
+        style={{ transitionProperty: "translate" }}
       >
         <HamburgerButton
           isOpen={menuOpen}
@@ -29,7 +29,11 @@ export default function Header() {
           scrolled={scrolled}
         />
 
-        <a href="/" aria-label="Yaks & Nomads home" className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14">
+        <a
+          href="/"
+          aria-label="Yaks & Nomads home"
+          className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
+        >
           <img
             src="/fonts/images/logo/header.webp"
             alt="Yaks & Nomads"
@@ -47,20 +51,24 @@ export default function Header() {
 
       <header
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 bg-white shadow-sm py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          scrolled ? 'translate-y-0' : '-translate-y-full'
+          scrolled ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ transitionProperty: 'translate' }}
+        style={{ transitionProperty: "translate" }}
       >
         <HamburgerButton
           isOpen={menuOpen}
           onClick={() => setMenuOpen(true)}
-          scrolled
+          scrolled={scrolled}
         />
 
-        <a href="/" aria-label="Yaks & Nomads home" className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14">
+        <a
+          href="/"
+          aria-label="Yaks & Nomads home"
+          className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
+        >
           <span
             className="whitespace-nowrap text-[clamp(18px,5.5vw,21px)] md:text-[22px] tracking-widest font-semibold text-[#5B3231]"
-            style={{ fontFamily: 'var(--font-seasons), Georgia, serif' }}
+            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
           >
             Yaks & Nomads
           </span>
