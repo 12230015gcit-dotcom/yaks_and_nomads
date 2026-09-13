@@ -15,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-white py-16 px-6 md:pl-[50px] md:pr-[0px]">
+    <footer className="relative bg-white py-16 px-6 md:pl-[50px] md:pr-6 lg:pr-[30px] xl:pr-[50px]">
       <div
         aria-hidden="true"
         className="absolute top-0 left-0 w-full h-[0.25px] bg-black/10"
