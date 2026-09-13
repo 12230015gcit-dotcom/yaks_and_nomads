@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[40px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled ? "-translate-y-full pointer-events-none" : "translate-y-0"
         }`}
         style={{ transitionProperty: "translate" }}
@@ -43,14 +43,14 @@ export default function Header() {
 
         <a
           href="/contact"
-          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-full border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
+          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
         >
           Enquire Now
         </a>
       </header>
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 bg-white shadow-sm py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[130px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 sm:gap-3 bg-white shadow-sm py-3 sm:py-4 md:py-5 px-4 sm:px-6 md:px-[40px] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolled ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{ transitionProperty: "translate" }}
@@ -76,7 +76,7 @@ export default function Header() {
 
         <a
           href="/contact"
-          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-full border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
+          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-one border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
         >
           Enquire Now
         </a>
