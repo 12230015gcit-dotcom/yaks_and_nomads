@@ -315,10 +315,10 @@ function IntroStatementSection() {
     <FadeIn>
       <section className="bg-white py-16 md:py-20 px-6 sm:px-8 md:px-[50px] text-[#5B3231]">
         <p
-          className="max-w-3xl mx-auto text-center leading-relaxed text-[#5B3231]/80"
+          className="max-w-3xl mx-auto text-center leading-relaxed text-[#000000]/90"
           style={{
             fontFamily: "var(--font-merriweather), Georgia, serif",
-            fontSize: "19px",
+            fontSize: "21px",
             fontWeight: "200",
           }}
         >
