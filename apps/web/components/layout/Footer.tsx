@@ -8,10 +8,10 @@ export default function Footer() {
     fontSize: "12px",
     color: "rgba(0, 0, 0, 0.5)",
   };
+
   const linkStyle = {
     fontFamily: "var(--font-merriweather), Georgia, serif",
-    fontSize: "14px",
-    color: "rgba(0, 0, 0, 0.6)",
+    fontSize: "12px",
   };
 
   return (
@@ -20,7 +20,8 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute top-0 left-0 w-full h-[0.25px] bg-black/10"
       />
-      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-x-20 gap-y-10 lg:gap-x-24">
+
+      <div className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-x-20 gap-y-10 lg:gap-x-24">
         <div className="space-y-4">
           <Link href="/">
             <img
@@ -31,15 +32,16 @@ export default function Footer() {
               decoding="async"
             />
           </Link>
+
           <p
             className="text-black/60 leading-relaxed mt-6"
             style={{
               fontFamily: "var(--font-merriweather), Georgia, serif",
-              fontSize: "12px",
+              fontSize: "10px",
             }}
           >
             Yaks & Nomads @ 2026 <br />
-            Photos and Videos Department of Tourism, Bhutan
+            Few Photos and Videos Department of Tourism, Bhutan
           </p>
         </div>
 
@@ -50,7 +52,7 @@ export default function Footer() {
               <Link
                 href="/"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Home
               </Link>
@@ -59,7 +61,7 @@ export default function Footer() {
               <Link
                 href="/about"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 About Us
               </Link>
@@ -68,7 +70,7 @@ export default function Footer() {
               <Link
                 href="/faq"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 FAQ
               </Link>
@@ -77,7 +79,7 @@ export default function Footer() {
               <Link
                 href="/contact"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Contact Us
               </Link>
@@ -86,7 +88,7 @@ export default function Footer() {
               <Link
                 href="/privacy-policy"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Privacy Policy
               </Link>
@@ -95,7 +97,7 @@ export default function Footer() {
               <Link
                 href="/booking-terms"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Booking Terms and Conditions
               </Link>
@@ -112,7 +114,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Tiktok
               </a>
@@ -123,7 +125,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Youtube
               </a>
@@ -134,7 +136,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Facebook
               </a>
@@ -145,7 +147,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 Instagram
               </a>
@@ -160,7 +162,7 @@ export default function Footer() {
               <a
                 href="tel:+97517000000"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 (+975) 17000000
               </a>
@@ -171,7 +173,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={linkStyle}
-                className="hover:text-[#5B3231] transition-colors"
+                className="text-black/60 hover:text-[#5B3231] transition-colors"
               >
                 hello@yaksandnomads.com
               </a>

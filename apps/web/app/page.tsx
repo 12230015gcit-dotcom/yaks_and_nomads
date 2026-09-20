@@ -335,7 +335,7 @@ function IntroStatementSection() {
 function AboutSection() {
   return (
     <FadeIn>
-      <section className="relative pt-30 pb-30 md:pb-75 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] text-slate-800">
+      <section className="relative pt-30 pb-30 md:pb-30 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] text-slate-800">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50 will-change-transform"
           style={{
@@ -353,7 +353,7 @@ function AboutSection() {
                 }}
               >
                 <span
-                  className="block w-fit text-[21px] uppercase tracking-widest text-[#5B3231]/80 font-semibold"
+                  className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
                   style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
                 >
                   Adventure Awaits
@@ -405,10 +405,10 @@ function AboutSection() {
             </FadeIn>
 
             {/* Image collage, replaces AdventureCarousel — hidden on phones, visible from tablet (md) up */}
-            <FadeIn delay={150} className="relative hidden md:block">
+            <FadeIn delay={150} className="relative hidden lg:block pb-60">
               <div className="relative h-[420px] sm:h-[520px] lg:h-[600px]">
-                {/* Large image, top-right */}
-                <div className="absolute top-0 right-0 w-[99%] h-[100%] rounded-one overflow-hidden shadow-lg">
+                {/* Large image, top-right, 1:1 ratio, scales with viewport */}
+                <div className="absolute top-0 right-0 w-[44.3vw] aspect-square rounded-one overflow-hidden shadow-lg">
                   <img
                     src="/fonts/images/AdventuresAwaits1.webp"
                     alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
@@ -417,7 +417,7 @@ function AboutSection() {
                   />
                 </div>
                 {/* Smaller image, bottom-left, overlapping and bleeding outward */}
-                <div className="absolute bottom-[-30%] left-[-8%] sm:left-[-24%] w-[67%] h-[55%] rounded-one overflow-hidden shadow-xl">
+                <div className="absolute bottom-[-42%] left-[-8%] sm:left-[-24%] w-[30.11vw] aspect-[1.334] rounded-one overflow-hidden shadow-xl">
                   <img
                     src="/fonts/images/aaron-santelices-WvZa770TvXo-unsplash.webp"
                     alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
@@ -520,7 +520,7 @@ function ExperiencesSection() {
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               <FadeIn className="lg:col-span-4 min-w-0 space-y-4">
                 <span
-                  className="block w-fit text-[21px] uppercase tracking-widest text-[#5B3231]/80 font-semibold"
+                  className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
                   style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
                 >
                   Our Advantage
@@ -624,21 +624,21 @@ function FeaturedSection() {
         <FadeIn className="relative z-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-5 lg:col-span-5">
+            <div className="space-y-5 lg:col-span-5 md:flex md:flex-col md:items-center md:text-center lg:block lg:text-left">
               <span
-                className="block w-fit text-[21px] uppercase tracking-widest text-[ #background: #FFFFFF]/80 font-semibold"
+                className="block w-fit md:mx-auto lg:mx-0 text-[16px] uppercase tracking-widest text-[#FFFFFF]/80 font-normal"
                 style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
               >
                 FEATURED ADVENTURE
               </span>
               <h2
-                className="font-serif text-[36px] text-[#FFFFFF]/80 leading-tight"
+                className="font-serif text-[36px] text-[#FFFFFF]/80 leading-tight "
                 style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
               >
                 The Royal Highland <br /> Festival
               </h2>
               <p
-                className="text-[16px] text-[#FFFFFF]/70 font-serif leading-relaxed max-w-[400px] pt-[12px]"
+                className="text-[16px] text-[#FFFFFF]/70 font-serif leading-relaxed max-w-[400px] md:mx-auto lg:mx-0 pt-[12px]"
                 style={{
                   fontFamily: "var(--font-merriweather), Georgia, serif",
                 }}
@@ -660,8 +660,8 @@ function FeaturedSection() {
             </div>
 
             {/* Press Card - Fixed alignment */}
-            <div className="lg:col-span-7 flex justify-end">
-              <div className="bg-[#A8735D]/50 w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
+            <div className="lg:col-span-7 flex justify-end md:justify-center lg:justify-end">
+              <div className="bg-[rgba(255,210,143,0.8)] w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
                 <div className="space-y-3 text-center">
                   <h3
                     className="font-serif text-[28px] text-white"
@@ -749,6 +749,7 @@ interface Tour {
   description: string;
   image: string;
   slug: string;
+  bgColor: string;
 }
 
 const toursData: Tour[] = [
@@ -760,6 +761,7 @@ const toursData: Tour[] = [
       "Explore Bhutan’s cultural highlights in Thimphu, Punakha, and Phobjikha Valley, discovering sacred sites, historic landmarks, local traditions, and stunning mountain landscapes. The journey culminates with a hike to the iconic Tiger’s Nest Monastery.",
     image: "/fonts/images/Thimphu.webp",
     slug: "western-bhutan-highlights-tour",
+    bgColor: "#F2EBDD",
   },
   {
     id: 2,
@@ -769,6 +771,7 @@ const toursData: Tour[] = [
       "Enter Bhutan through Samdrup Jongkhar and explore its eastern and central regions, discovering village life and the unique Brokpa culture of Merak. Continue through Mongar and Bumthang to Phobjikha, Punakha, Thimphu, and Haa Valley, before returning to Paro via Chele La Pass. The journey concludes with a hike to the Tiger’s Nest Monastery.",
     image: "/fonts/images/ParoDzong.webp",
     slug: "eastern-bhutan-untouched-journey",
+    bgColor: "#7C8672",
   },
   {
     id: 3,
@@ -778,6 +781,7 @@ const toursData: Tour[] = [
       "Explore the cultural heart of western Bhutan, from Paro and Punakha to Thimphu and Haa Valley. Discover historic dzongs, sacred monasteries, villages, and scenic hiking trails, culminating in a memorable hike to the Tiger’s Nest Monastery.",
     image: "/fonts/images/Hiking.webp",
     slug: "cultural-exploration-day-hikes",
+    bgColor: "#B39A62",
   },
   {
     id: 4,
@@ -787,6 +791,7 @@ const toursData: Tour[] = [
       "Trek from Paro’s Tiger’s Nest through Jigme Dorji Wangchuck National Park, crossing remote landscapes and the 4,820-meter Yeli La Pass, with stunning views of Mount Jumolhari. A thrilling journey combining Himalayan wilderness, culture, and adventure.",
     image: "/fonts/images/Trek.webp",
     slug: "jumolhari-trek",
+    bgColor: "#3F5145",
   },
 ];
 
@@ -831,32 +836,27 @@ function ToursCarousel({ tours }: { tours: typeof toursData }) {
 
   return (
     <div className="relative">
-      {/* Grey background - separate, right-aligned, shorter height
-          Mobile/tablet only (max-lg): full width, auto height, starts 130px
-          down so the image pokes above it, stops above the nav row.
-          Desktop (lg+): unchanged — inline style still wins. */}
       <div
-        className="absolute right-0 bg-[#D9D9D9]/70 rounded-none -z-10
-                   max-lg:!left-1/2 max-lg:!-translate-x-1/2 max-lg:!w-[110%] max-lg:!max-w-[700px] max-lg:!h-auto
-                   max-lg:!top-[130px] max-lg:!bottom-20"
+        className="absolute right-0 rounded-none -z-10 transition-colors duration-500 ease-in-out
+             max-lg:!left-1/2 max-lg:!-translate-x-1/2 max-lg:!w-[110%] max-lg:!max-w-[700px] max-lg:!h-auto
+             max-lg:!top-[130px] max-lg:!bottom-20"
         style={{
-          width: "calc(97%)",
-          left: "90px",
-          height: "650px",
+          width: "calc(100%)",
+          left: "50px",
+          height: "700px",
+          backgroundColor: tours[currentIndex].bgColor,
+          opacity: 0.7,
         }}
       />
 
-      <div className="relative z-10 p-8 md:p-12 lg:p-16 h-auto lg:h-[650px] flex flex-col justify-center">
+      <div className="relative z-10 p-8 md:p-12 lg:p-22 h-auto lg:h-[700px] flex flex-col justify-center">
         <div className="relative w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
-            {/* Image - now takes 5 columns instead of 6
-                Mobile/tablet only (max-lg): centred, smaller, no top pull.
-                Desktop (lg+): unchanged. */}
             <div
-              className="lg:col-span-5 lg:-ml-[160px] z-20 relative
+              className="lg:col-span-6 lg:-ml-[160px] z-20 relative
                 max-lg:mx-auto max-lg:w-[92%] max-lg:max-w-[380px]"
             >
-              <div className="overflow-hidden aspect-[4/3] w-full relative">
+              <div className="overflow-hidden aspect-[4/2.84] w-full relative ">
                 {tours.map((tour, idx) => (
                   <img
                     key={tour.id}
@@ -960,13 +960,13 @@ function ToursSection() {
         </div>
 
         {/* Content wrapper - move this independently */}
-        <div className="relative z-10 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px]">
+        <div className="relative z-10 pl-4 sm:pl-6 md:pl-[27px] pr-4 sm:pr-6 md:pr-[25px] lg:pr-[0]">
           {/* Add padding/margin to move content down */}
           <div className="pt-20 sm:pt-24 md:pt-32 lg:pt-40 pb-24">
             <div className="space-y-8 px-4 sm:px-8 md:px-12 lg:px-24">
               <div className="text-center space-y-4 max-w-2xl mx-auto">
                 <span
-                  className="block w-fit mx-auto text-[21px] tracking-widest text-[#5B3231]/80 font-sans font-semibold"
+                  className="block w-fit mx-auto text-[16px] tracking-widest text-[#5B3231]/80 font-sans font-normal"
                   style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
                 >
                   PRIVATE JOURNEYS
@@ -1200,12 +1200,12 @@ function ReelsSection() {
   return (
     <>
       <FadeIn>
-        <section className="pt-24 pb-50 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[45px] bg-white">
+        <section className="pt-10 pb-50 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[45px] bg-white">
           <div className="space-y-16">
             <FadeIn className="flex justify-between items-end">
               <div className="space-y-3">
                 <span
-                  className="block w-fit text-[21px] uppercase tracking-widest text-[#5B3231]/80 font-semibold"
+                  className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
                   style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
                 >
                   Travel Inspiration
@@ -1333,10 +1333,10 @@ function ImpactSection() {
 
   return (
     <FadeIn>
-      <section className="py-16 sm:py-20 md:py-28 lg:py-50 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] bg-[#D9D9D9] text-slate-800">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-30 lg:pb-55 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] bg-[#D9D9D9] text-slate-800">
         <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
           {/* Images Collage */}
-          <FadeIn className="hidden sm:block lg:col-span-5 relative mb-20 sm:mb-24 lg:mb-0">
+          <FadeIn className="hidden lg:block lg:col-span-5 relative mb-20 sm:mb-24 lg:mb-0">
             <div className="w-3/4 aspect-3/4 overflow-hidden mx-auto lg:mx-0">
               <img
                 src="/fonts/images/RedPanda.webp"
@@ -1363,7 +1363,7 @@ function ImpactSection() {
             className="lg:col-span-7 space-y-6 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
           >
             <span
-              className="block w-fit text-[16px] sm:text-[18px] lg:text-[21px] uppercase tracking-widest text-[#5B3231]/80 font-semibold"
+              className="block w-fit text-[16px] sm:text-[18px] lg:text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
               style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
             >
               Giving Back
@@ -1383,7 +1383,7 @@ function ImpactSection() {
               with a thoughtful perspective on money and generosity.
             </p>
 
-            <div className="pt-10 divide-y divide-slate-400/50 border-b border-slate-400/50">
+            <div className="pt-5 divide-y divide-slate-400/50 border-b border-slate-400/50">
               {items.map((item, index) => (
                 <div key={index} className="py-6">
                   <button
@@ -1517,7 +1517,7 @@ function TestimonialsSection() {
         <div className="relative space-y-12">
           <FadeIn className="text-center max-w-[700px] mx-auto space-y-3">
             <span
-              className="block w-fit mx-auto text-[21px] uppercase tracking-widest text-[#8B5A52] font-semibold"
+              className="block w-fit mx-auto text-[16px] uppercase tracking-widest text-[#8B5A52] font-normal"
               style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
             >
               Happy Travelers
@@ -1564,7 +1564,7 @@ function TestimonialsSection() {
                 {TESTIMONIALS.map((t) => (
                   <CarouselItem key={t.name}>
                     <div
-                      className="space-y-4 font-serif text-[18px] text-slate-700 leading-relaxed max-w-2xl mx-auto"
+                      className="space-y-4 font-serif text-[16px] text-slate-700 leading-relaxed max-w-2xl mx-auto"
                       style={{
                         fontFamily: "var(--font-merriweather), Georgia, serif",
                       }}
