@@ -992,7 +992,7 @@ function ToursSection() {
         </div>
 
         {/* Content wrapper: max-w stops the layout growing past 2560px */}
-        <div className="relative z-10 pl-4 sm:pl-6 md:pl-[27px] pr-4 sm:pr-6 md:pr-[25px] lg:pr-[0]">
+        <div className="relative z-10 pl-1 sm:pl-6 md:pl-[27px] pr-1 sm:pr-6 md:pr-[25px] lg:pr-[0]">
           {/* Add padding/margin to move content down */}
           <div className="pt-20 sm:pt-24 md:pt-32 lg:pt-40 pb-24">
             <div className="space-y-8 px-4 sm:px-8 md:px-12 lg:px-24">
