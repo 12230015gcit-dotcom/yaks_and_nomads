@@ -942,7 +942,7 @@ function ToursCarousel({ tours }: { tours: typeof toursData }) {
 
       {/* Navigation buttons: centered on mobile, right edge aligned with the panel on lg+ */}
       <div className="relative z-10">
-        <div className="flex justify-center lg:justify-end items-center gap-3 lg:gap-[calc(var(--u)_*_0.625)] pt-6 lg:pt-[calc(var(--u)_*_1.25_+_var(--extra))] pb-4 lg:-mr-[calc(var(--u)_*_2.604)]">
+        <div className="flex justify-end items-center gap-3 lg:gap-[calc(var(--u)_*_0.625)] pt-6 lg:pt-[calc(var(--u)_*_1.25_+_var(--extra))] pb-4 lg:-mr-[calc(var(--u)_*_2.604)]">
           <button
             onClick={handlePrev}
             aria-label="Previous tour"
@@ -1021,7 +1021,7 @@ function ToursSection() {
                 </p>
               </div>
 
-              <div className="relative md:pt-12 lg:pt-[calc(var(--u)_*_2.5_+_var(--extra))]">
+              <div className="relative flex justify-end md:pt-12 lg:pt-[calc(var(--u)_*_2.5_+_var(--extra))]">
                 <ToursCarousel tours={toursData} />
               </div>
             </div>
