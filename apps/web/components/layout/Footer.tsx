@@ -25,9 +25,9 @@ export default function Footer() {
         <div className="space-y-4">
           <Link href="/">
             <img
-              src="/fonts/images/logo/Logo_Small.webp"
+              src="/fonts/images/logo/logo.png"
               alt="Yaks & Nomads"
-              className="h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
               loading="lazy"
               decoding="async"
             />
@@ -41,7 +41,7 @@ export default function Footer() {
             }}
           >
             Yaks & Nomads @ 2026 <br />
-            Few Photos and Videos Department of Tourism, Bhutan
+            Few Photos and Videos <strong>Department of Tourism, Bhutan</strong>
           </p>
         </div>
 

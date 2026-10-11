@@ -32,10 +32,10 @@ export default function Header() {
         <a
           href="/"
           aria-label="Yaks & Nomads home"
-          className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
+          className="relative flex-1 min-w-0 flex items-center justify-end sm:justify-center h-9 sm:h-11 md:h-14"
         >
           <img
-            src="/fonts/images/logo/header.webp"
+            src="/fonts/images/logo/logo.png"
             alt="Yaks & Nomads"
             className="h-full w-auto max-w-[30vw] sm:max-w-none object-contain"
           />
@@ -43,7 +43,7 @@ export default function Header() {
 
         <a
           href="/contact"
-          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
+          className="hidden sm:flex shrink-0 whitespace-nowrap items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
         >
           Enquire Now
         </a>
@@ -64,10 +64,10 @@ export default function Header() {
         <a
           href="/"
           aria-label="Yaks & Nomads home"
-          className="relative flex-1 min-w-0 flex items-center justify-center h-9 sm:h-11 md:h-14"
+          className="relative flex-1 min-w-0 flex items-center justify-end sm:justify-center h-9 sm:h-11 md:h-14"
         >
           <span
-            className="whitespace-nowrap text-[clamp(18px,5.5vw,21px)] md:text-[22px] tracking-widest font-semibold text-[#5B3231]"
+            className="whitespace-nowrap text-[clamp(18px,5.5vw,21px)] md:text-[20px] tracking-widest font-semibold text-[#5B3231]"
             style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
           >
             Yaks & Nomads
@@ -76,7 +76,7 @@ export default function Header() {
 
         <a
           href="/contact"
-          className="shrink-0 whitespace-nowrap flex items-center justify-center tracking-widest rounded-one border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
+          className="hidden sm:flex shrink-0 whitespace-nowrap items-center justify-center tracking-widest rounded-one border border-[#5B3231] bg-white/30 text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 font-[--font-seasons]"
         >
           Enquire Now
         </a>

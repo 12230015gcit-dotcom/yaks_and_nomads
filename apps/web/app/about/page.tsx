@@ -59,17 +59,11 @@ function AboutHero() {
 // --- Section 2: The Heart of Yaks & Nomads ---
 function HeartSection() {
   return (
-    <section className="py-32 px-6 text-slate-800 md:pl-[50px] md:pr-[45]">
+    <section className="py-32 px-6 text-slate-800 md:pl-[50px] md:pr-[45] mb-[30px]">
       <div className="grid lg:grid-cols-12 gap-12 items-stretch ">
         {/* Left Column: Text */}
 
-        <FadeIn className="lg:col-span-6 min-w-0 space-y-4">
-          <span
-            className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
-            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-          >
-            LOCAL. PERSONAL. EFFICIENT.
-          </span>
+        <FadeIn className="lg:col-span-6 min-w-0 space-y-10">
           <h2
             className="font-serif text-[36px] text-black/80 leading-tight"
             style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
@@ -139,7 +133,7 @@ function HeartSection() {
 // --- Section 3: CEO Profile ---
 function CeoSection() {
   return (
-    <section className="py-24 px-1 md:pl-[50px] md:pr-[45] bg-[#D9D9D9] text-slate-800">
+    <section className="py-24 px-6 md:pl-[50px] md:pr-[45] bg-[#D9D9D9] text-slate-800">
       <div className="mx-auto space-y-12">
         <FadeIn>
           <h2
@@ -254,12 +248,12 @@ function AmbassadorsSection() {
       position: "50% 60%",
     },
   ];
-
+  const [activeGuide, setActiveGuide] = useState<number | null>(null);
   return (
     <section className="py-24 px-6 md:pl-[50px] md:pr-[45] bg-[#fcfbfa]">
       <div className="mx-auto grid lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text */}
-        <FadeIn className="lg:col-span-4 space-y-4 flex flex-col justify-center h-full">
+        <FadeIn className="lg:col-span-4 space-y-10 flex flex-col justify-center h-full">
           <h2
             className="font-serif text-[36px] text-slate-900 leading-tight"
             style={{ fontFamily: "var(--font-seasons), serif" }}
@@ -285,6 +279,7 @@ function AmbassadorsSection() {
           {guides.map((guide, idx) => (
             <div
               key={idx}
+              onClick={() => setActiveGuide(activeGuide === idx ? null : idx)}
               className={`group relative aspect-square overflow-hidden bg-slate-200 cursor-pointer ${
                 [
                   "sm:col-start-1 sm:row-start-1",
@@ -309,7 +304,12 @@ function AmbassadorsSection() {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-10 pb-3 px-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+
+              <div
+                className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-10 pb-3 px-3 transition-transform duration-500 ease-out ${
+                  activeGuide === idx ? "translate-y-0" : "translate-y-full"
+                } md:group-hover:translate-y-0`}
+              >
                 <span
                   className="text-white text-[16px] font-medium"
                   style={{ fontFamily: "var(--font-merriweather), serif" }}
@@ -381,7 +381,7 @@ function PartnerSection() {
           {/* Text & Accordion */}
           <FadeIn
             delay={150}
-            className="lg:col-span-7 space-y-6 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
+            className="lg:col-span-7 space-y-4 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
           >
             <h2
               className="font-serif text-[26px] sm:text-[30px] lg:text-[36px] text-[#000000]/80 leading-tight"
@@ -390,7 +390,7 @@ function PartnerSection() {
               Become our <br /> Partner Today.
             </h2>
             <p
-              className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed max-w-[540px]"
+              className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed max-w-[540px] pt-[30px]"
               style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
             >
               At Yaks & Nomads, we grow through collaboration with local

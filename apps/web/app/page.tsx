@@ -47,17 +47,17 @@ function preloadImages(srcs: string[]) {
 // --- Section 1: Hero ---
 const HERO_TAGLINES = [
   {
-    image: "/fonts/images/landingHero1.webp",
+    image: "/fonts/images/heroImage/hero1.jpg",
     line1: "Bhutan Travel: Step Into the",
     line2: " Kingdom of Happiness.",
   },
   {
-    image: "/fonts/images/landingHero2.webp",
+    image: "/fonts/images/heroImage/hero2.jpg",
     line1: "Your Once-in-a-Lifetime Bhutan ",
     line2: "Journey,100% Tailored to You.",
   },
   {
-    image: "/fonts/images/LandingHero3.webp",
+    image: "/fonts/images/heroImage/hero3.jpg",
     line1: "Travel Slowly. Connect Deeply.",
     line2: "Experience Bhutan. Take Memories Home.",
   },
@@ -335,7 +335,7 @@ function IntroStatementSection() {
 function AboutSection() {
   return (
     <FadeIn>
-      <section className="relative pt-30 pb-30 md:pb-30 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] text-slate-800">
+      <section className="relative pt-30 pt-[clamp(120px,8vw,180px)] pb-[clamp(80px,6vw,240px)] pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] text-slate-800">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-50 will-change-transform"
           style={{
@@ -345,8 +345,8 @@ function AboutSection() {
         />
         <div className="absolute inset-0 bg-linear-to-br from-sky-100/30 via-sky-50/20 to-blue-100/30" />
         <div className="relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-24">
-            <FadeIn className="space-y-4 text-black/70 font-serif leading-relaxed text-[16px]">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-4">
+            <FadeIn className="space-y-4 text-black/70 font-serif leading-relaxed text-[16px] ">
               <div
                 style={{
                   fontFamily: "var(--font-merriweather), Georgia, serif",
@@ -359,7 +359,7 @@ function AboutSection() {
                   Adventure Awaits
                 </span>
                 <h2
-                  className="font-serif text-[36px] text-black/80 leading-tight pt-2 tracking-wide"
+                  className="font-serif text-[36px] text-black/80 leading-tight pt-2 tracking-wide "
                   style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
                 >
                   Travel to Bhutan.
@@ -367,7 +367,7 @@ function AboutSection() {
                   Return Rewritten.
                 </h2>
 
-                <p className="leading-normal pt-[26px] pr-0 md:pr-30">
+                <p className="leading-normal pt-[50px] pr-0 md:pr-50 ">
                   Here, travel is more than simply visiting a destination—it is
                   an immersion into a different way of being. In this majestic
                   Himalayan Kingdom, wealth isn't measured in material
@@ -390,10 +390,10 @@ function AboutSection() {
                   happiness.
                 </p>
 
-                <div className="pt-[26px]">
+                <div className="pt-[50px]">
                   <a
                     href="/contact"
-                    className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95"
+                    className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95"
                     style={{
                       fontFamily: "var(--font-merriweather), Georgia, serif",
                     }}
@@ -403,28 +403,65 @@ function AboutSection() {
                 </div>
               </div>
             </FadeIn>
+            {/* Image collage — only image sizing and positioning adjusted */}
+            <FadeIn delay={150} className="relative hidden min-w-0 lg:block">
+              {/* Collage wrapper */}
+              <div className="relative w-full">
+                {/* Image container — keep the existing height */}
+                <div
+                  className="
+        relative
+        w-full
+        h-[clamp(600px,53vw,1011px)]
+      "
+                >
+                  {/* Large square image */}
+                  <div
+                    className="
+          absolute top-0 right-0
+          w-[clamp(560px,calc(15.39vw+423.79px),645.41px)]
+          min-[1440px]:w-[clamp(645.41px,calc(33.62vw+161.28px),806.78px)]
+          aspect-square overflow-hidden rounded-one shadow-lg
+        "
+                  >
+                    <img
+                      src="/fonts/images/adventureAwaits/bigPhoto.jpg"
+                      alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
+                      className="block h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
 
-            {/* Image collage, replaces AdventureCarousel — hidden on phones, visible from tablet (md) up */}
-            <FadeIn delay={150} className="relative hidden lg:block pb-60">
-              <div className="relative h-[420px] sm:h-[520px] lg:h-[600px]">
-                {/* Large image, top-right, 1:1 ratio, scales with viewport */}
-                <div className="absolute top-0 right-0 w-[44.3vw] aspect-square rounded-one overflow-hidden shadow-lg">
-                  <img
-                    src="/fonts/images/AdventuresAwaits1.webp"
-                    alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  {/* Small overlapping landscape image */}
+                  <div
+                    className="
+          absolute
+          top-[clamp(441.8px,calc(12.15vw+334.57px),509.5px)]
+          min-[1440px]:top-[clamp(509.5px,calc(26.54vw+127.33px),636.9px)]
+          min-[1920px]:top-[63%]
+          left-[-16.9%]
+          w-[clamp(280px,calc(59.54vw-424.82px),433.53px)]
+          min-[1440px]:w-[clamp(433.53px,calc(22.58vw+108.3px),541.91px)]
+          aspect-[1.334] overflow-hidden rounded-one shadow-xl
+        "
+                  >
+                    <img
+                      src="/fonts/images/adventureAwaits/smallPhoto.jpg"
+                      alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
+                      className="block h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                {/* Smaller image, bottom-left, overlapping and bleeding outward */}
-                <div className="absolute bottom-[-42%] left-[-8%] sm:left-[-24%] w-[30.11vw] aspect-[1.334] rounded-one overflow-hidden shadow-xl">
-                  <img
-                    src="/fonts/images/aaron-santelices-WvZa770TvXo-unsplash.webp"
-                    alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+
+                {/* Bottom spacing — outside the fixed-height image container */}
+                <div
+                  aria-hidden="true"
+                  className="
+        h-[clamp(120px,8vw,180px)]
+        min-[1920px]:h-[40px]
+      "
+                />
               </div>
             </FadeIn>
           </div>
@@ -436,49 +473,49 @@ function AboutSection() {
 // --- Section 3: Out-Of-The-Box Experiences ---
 const EXPERIENCES = [
   {
-    image: "/fonts/images/GameofArchery.webp",
+    image: "/fonts/images/ourAdvantage/Game of Archery.jpg",
     title: "A Game of Archery",
     description:
       "Try your hand at this traditional sport and experience the thrill of hitting the target.",
   },
   {
-    image: "/fonts/images/monastry.webp",
+    image: "/fonts/images/ourAdvantage/monastry.webp",
     title: "Monastery Stay",
     description:
       "Step into the shoes of monks—join prayer sessions, sleep in their modest quarters, and share meals with them.",
   },
   {
-    image: "/fonts/images/stamps.webp",
+    image: "/fonts/images/ourAdvantage/Make own stamp.jpg",
     title: "Make Your Own Stamps",
     description:
       "Imagine the joy of having your photo on a stamp and sending a postcard to your loved ones.",
   },
   {
-    image: "/fonts/images/Astrology.webp",
+    image: "/fonts/images/ourAdvantage/Astrology.webp",
     title: "Astrology Reading",
     description:
       "Consult a Buddhist astrologer for insights into your past life and guidance for your future.",
   },
   {
-    image: "/fonts/images/Ema.webp",
+    image: "/fonts/images/ourAdvantage/Ema.webp",
     title: "Learn to Cook Ema Datshi",
     description:
       "Ema Datshi, a chili and cheese dish, is the national dish of the country. If prepared correctly, you will enjoy it.",
   },
   {
-    image: "/fonts/images/Yoga.webp",
+    image: "/fonts/images/ourAdvantage/Yoga & Meditation.jpg",
     title: "Yoga & Meditation",
     description:
       "Whether you are an intermediate or an avid practitioner, our trained yoga and meditation teacher will guide you.",
   },
   {
-    image: "/fonts/images/stoneBath.webp",
+    image: "/fonts/images/ourAdvantage/Hot stone Bath.jpg",
     title: "Hot Stone Bath",
     description:
       "Pamper yourself with a traditional hot stone bath at the end of your day hike.",
   },
   {
-    image: "/fonts/images/village.webp",
+    image: "/fonts/images/ourAdvantage/Village stay.jpg",
     title: "Village Stay",
     description:
       "Enjoy engaging conversations with your host, farm-to-table meals, warm hospitality, and much more.",
@@ -532,7 +569,7 @@ function ExperiencesSection() {
                   Out-Of-The-Box <br /> Activities.
                 </h2>
                 <p
-                  className="text-[16px] text-black/70 font-serif leading-relaxed max-w-xs pt-[12px]"
+                  className="text-[16px] text-black/70 font-serif leading-relaxed max-w-xs pt-[30px]"
                   style={{
                     fontFamily: "var(--font-merriweather), Georgia, serif",
                   }}
@@ -543,11 +580,11 @@ function ExperiencesSection() {
                   enjoy bespoke adventures tailored to your interests.
                 </p>
 
-                <CarouselNavigation
-                  className="static gap-2 pt-[12px]"
+                {/* <CarouselNavigation
+                  className="static gap-2 pt-[30px]"
                   classNameButton="relative overflow-hidden border border-[#8B5A52] bg-transparent text-[#8B5A52] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-[#D9D9D9]"
                   alwaysShow
-                />
+                /> */}
               </FadeIn>
 
               <FadeIn delay={150} className="lg:col-span-8 min-w-0">
@@ -557,10 +594,7 @@ function ExperiencesSection() {
                       key={exp.title}
                       className="basis-full sm:basis-1/2 pr-4"
                     >
-                      <a
-                        href={`/contact?trip=${encodeURIComponent(exp.title)}`}
-                        className="block bg-white shadow-sm overflow-hidden h-full group transition-[transform,box-shadow] duration-300 ease-out"
-                      >
+                      <div className="block bg-white shadow-sm overflow-hidden h-full group transition-[transform,box-shadow] duration-300 ease-out">
                         <div className="aspect-4/5 bg-slate-200 overflow-hidden">
                           <img
                             src={exp.image}
@@ -588,7 +622,7 @@ function ExperiencesSection() {
                             {exp.description}
                           </p>
                         </div>
-                      </a>
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -624,21 +658,21 @@ function FeaturedSection() {
         <FadeIn className="relative z-10">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-5 lg:col-span-5 md:flex md:flex-col md:items-center md:text-center lg:block lg:text-left">
+            <div className="space-y-4 lg:col-span-5 md:flex md:flex-col md:items-center md:text-center lg:block lg:text-left">
               <span
-                className="block w-fit md:mx-auto lg:mx-0 text-[16px] uppercase tracking-widest text-[#FFFFFF]/80 font-normal"
+                className="block w-fit md:mx-auto lg:mx-0 text-[16px] uppercase tracking-widest text-[#FFFFFF] font-normal"
                 style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
               >
                 FEATURED ADVENTURE
               </span>
               <h2
-                className="font-serif text-[36px] text-[#FFFFFF]/80 leading-tight "
+                className="font-serif text-[36px] text-[#FFFFFF] leading-tight "
                 style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
               >
                 The Royal Highland <br /> Festival
               </h2>
               <p
-                className="text-[16px] text-[#FFFFFF]/70 font-serif leading-relaxed max-w-[400px] md:mx-auto lg:mx-0 pt-[12px]"
+                className="text-[16px] text-[#FFFFFF] font-serif leading-relaxed max-w-[400px] md:mx-auto lg:mx-0 pt-[30px]"
                 style={{
                   fontFamily: "var(--font-merriweather), Georgia, serif",
                 }}
@@ -646,10 +680,10 @@ function FeaturedSection() {
                 Held at 4,000 meters above sea level, the festival showcases the
                 rich traditions, resilience, and lifestyle of highland herders.
               </p>
-              <div>
+              <div className="pt-[30px]">
                 <a
                   href="/itinerary/royal-highland-festival"
-                  className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#FFFFFF]  text-[#FFFFFF] text-[16px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-[#5B3231] hover:text-white active:scale-95"
+                  className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#FFFFFF]  text-[#FFFFFF] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-[#5B3231] hover:text-white active:scale-95"
                   style={{
                     fontFamily: "var(--font-merriweather), Georgia, serif",
                   }}
@@ -661,7 +695,7 @@ function FeaturedSection() {
 
             {/* Press Card - Fixed alignment */}
             <div className="lg:col-span-7 flex justify-end md:justify-center lg:justify-end">
-              <div className="bg-[rgba(255,210,143,0.8)] w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
+              <div className="bg-[#A8735D]/50 w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
                 <div className="space-y-3 text-center">
                   <h3
                     className="font-serif text-[28px] text-white"
@@ -761,17 +795,17 @@ const toursData: Tour[] = [
       "Explore Bhutan’s cultural highlights in Thimphu, Punakha, and Phobjikha Valley, discovering sacred sites, historic landmarks, local traditions, and stunning mountain landscapes. The journey culminates with a hike to the iconic Tiger’s Nest Monastery.",
     image: "/fonts/images/Thimphu.webp",
     slug: "western-bhutan-highlights-tour",
-    bgColor: "#F2EBDD",
+    bgColor: "#E7E7E7",
   },
   {
     id: 2,
     title: "Eastern Bhutan: The Untouched Journey",
     subtitle: "PRIVATE JOURNEYS",
     description:
-      "Enter Bhutan through Samdrup Jongkhar and explore its eastern and central regions, discovering village life and the unique Brokpa culture of Merak. Continue through Mongar and Bumthang to Phobjikha, Punakha, Thimphu, and Haa Valley, before returning to Paro via Chele La Pass. The journey concludes with a hike to the Tiger’s Nest Monastery.",
+      "Enter Bhutan through Samdrup Jongkhar and explore its eastern and central regions, discovering village life and the unique Brokpa culture of Merak. Continue through Mongar and Bumthang to Phobjikha, Punakha, Thimphu, and Haa Valley, before returning to Paro via Chele La Pass.",
     image: "/fonts/images/ParoDzong.webp",
     slug: "eastern-bhutan-untouched-journey",
-    bgColor: "#7C8672",
+    bgColor: "#CFCFCF",
   },
   {
     id: 3,
@@ -781,7 +815,7 @@ const toursData: Tour[] = [
       "Explore the cultural heart of western Bhutan, from Paro and Punakha to Thimphu and Haa Valley. Discover historic dzongs, sacred monasteries, villages, and scenic hiking trails, culminating in a memorable hike to the Tiger’s Nest Monastery.",
     image: "/fonts/images/Hiking.webp",
     slug: "cultural-exploration-day-hikes",
-    bgColor: "#B39A62",
+    bgColor: "#B6B6B6",
   },
   {
     id: 4,
@@ -791,150 +825,137 @@ const toursData: Tour[] = [
       "Trek from Paro’s Tiger’s Nest through Jigme Dorji Wangchuck National Park, crossing remote landscapes and the 4,820-meter Yeli La Pass, with stunning views of Mount Jumolhari. A thrilling journey combining Himalayan wilderness, culture, and adventure.",
     image: "/fonts/images/Trek.webp",
     slug: "jumolhari-trek",
-    bgColor: "#3F5145",
+    bgColor: "#9E9E9E",
   },
 ];
 
+const tourNavBtn =
+  "relative overflow-hidden rounded-full border border-[#8B5A52] bg-transparent text-[#8B5A52] flex items-center justify-center w-10 h-10 lg:w-[max(36px,calc(var(--u)_*_2.083))] lg:h-[max(36px,calc(var(--u)_*_2.083))] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-[#D9D9D9] focus-visible:ring-2 focus-visible:ring-[#8B5A52]/50 focus:outline-none";
+
+const tourNavIcon =
+  "w-4 h-4 lg:w-[max(14px,calc(var(--u)_*_0.833))] lg:h-[max(14px,calc(var(--u)_*_0.833))] stroke-[1.5]";
+
 function ToursCarousel({ tours }: { tours: typeof toursData }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reduced, setReduced] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [paused, setPaused] = useState(false);
   const count = tours.length;
 
+  const handlePrev = () => setCurrentIndex((i) => (i - 1 + count) % count);
+  const handleNext = () => setCurrentIndex((i) => (i + 1) % count);
+
+  // Autoplay: restarts after any manual click, pauses on hover/focus
   useEffect(() => {
-    setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  }, []);
-
-  const animateToIndex = (toIndex: number) => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    if (reduced) {
-      setCurrentIndex(toIndex);
-      setIsAnimating(false);
-      return;
-    }
-    setTimeout(() => {
-      setCurrentIndex(toIndex);
-      setIsAnimating(false);
-    }, 500);
-  };
-
-  const handlePrev = () => {
-    const next = currentIndex === 0 ? count - 1 : currentIndex - 1;
-    animateToIndex(next);
-  };
-
-  const handleNext = () => {
-    const next = currentIndex === count - 1 ? 0 : currentIndex + 1;
-    animateToIndex(next);
-  };
-
-  useEffect(() => {
-    const id = setInterval(handleNext, 4000);
+    if (paused) return;
+    const id = setInterval(() => setCurrentIndex((i) => (i + 1) % count), 4000);
     return () => clearInterval(id);
-  }, [currentIndex, count, reduced]);
+  }, [paused, count, currentIndex]);
 
   return (
-    <div className="relative">
-      <div
-        className="absolute right-0 rounded-none -z-10 transition-colors duration-500 ease-in-out
-             max-lg:!left-1/2 max-lg:!-translate-x-1/2 max-lg:!w-[110%] max-lg:!max-w-[700px] max-lg:!h-auto
-             max-lg:!top-[130px] max-lg:!bottom-20"
-        style={{
-          width: "calc(100%)",
-          left: "50px",
-          height: "700px",
-          backgroundColor: tours[currentIndex].bgColor,
-          opacity: 0.7,
-        }}
-      />
+    <div
+      className="relative isolate"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      <div className="relative">
+        {/* Grey panel.
+            Mobile/tablet: starts partway down the image and runs to the bottom of the card.
+            lg+: same box as the 1920 design (50px offset, 700px tall) scaled with --u. */}
+        <div
+          aria-hidden="true"
+          className="absolute left-0 right-0 bottom-0 top-[min(28vw,200px)] -z-10 transition-colors duration-500 ease-in-out motion-reduce:transition-none lg:-top-[var(--extra)] lg:-bottom-[var(--extra)] lg:right-auto lg:left-[calc(var(--u)_*_2.604)] lg:w-full"
+          style={{ backgroundColor: tours[currentIndex].bgColor, opacity: 0.7 }}
+        />
 
-      <div className="relative z-10 p-8 md:p-12 lg:p-22 h-auto lg:h-[700px] flex flex-col justify-center">
-        <div className="relative w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
-            <div
-              className="lg:col-span-6 lg:-ml-[160px] z-20 relative
-                max-lg:mx-auto max-lg:w-[92%] max-lg:max-w-[380px]"
-            >
-              <div className="overflow-hidden aspect-[4/2.84] w-full relative ">
-                {tours.map((tour, idx) => (
-                  <img
-                    key={tour.id}
-                    src={tour.image}
-                    alt={tour.title}
-                    className="w-full h-full object-cover absolute inset-0 transition-opacity duration-500 ease-in-out"
-                    style={{ opacity: idx === currentIndex ? 1 : 0 }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Content - now takes 7 columns instead of 6 for more width */}
-            <div className="lg:col-span-6 lg:pl-12 text-slate-800 relative flex flex-col justify-center">
-              {tours.map((tour, idx) => (
-                <div
-                  key={tour.id}
-                  className="transition-opacity duration-500 ease-in-out"
-                  style={{
-                    opacity: idx === currentIndex ? 1 : 0,
-                    position: idx === currentIndex ? "relative" : "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    pointerEvents: idx === currentIndex ? "auto" : "none",
-                  }}
-                >
-                  <h3
-                    className="text-[24px] text-black/80 font-normal leading-snug mb-4"
-                    style={{
-                      fontFamily: "var(--font-seasons), Georgia, serif",
-                    }}
-                  >
-                    {tour.title}
-                  </h3>
-                  <p
-                    className="text-[16px] text-black/70 leading-relaxed font-serif font-light mb-6"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    {tour.description}
-                  </p>
-                  <div>
-                    <a
-                      key={currentIndex}
-                      href={`/itinerary/${tour.slug}`}
-                      className="animate-fade-in inline-flex items-center justify-center tracking-widest rounded-one border border-[#5B3231] text-[#5B3231] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95 "
-                      style={{
-                        fontFamily: "var(--font-merriweather), Georgia, serif",
-                      }}
-                    >
-                      View This Trip
-                    </a>
-                  </div>
+        {/* Card content. lg+: 88px padding and 700px height at 1920 (lg:p-22 / lg:h-[700px]) */}
+        <div className="relative z-10 flex flex-col justify-center p-8 md:p-12 lg:p-[calc(var(--u)_*_4.583)] lg:h-[calc(var(--u)_*_36.458)]">
+          <div className="relative w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4 lg:gap-[calc(var(--u)_*_1.667)]">
+              {/* Image (overlaps the panel's left edge on lg+: -160px at 1920) */}
+              <div className="relative z-20 mx-auto w-[92%] max-w-[380px] md:max-w-[560px] lg:mx-0 lg:w-auto lg:max-w-none lg:col-span-6 lg:-ml-[calc(var(--u)_*_8.333)]">
+                <div className="overflow-hidden aspect-[4/2.84] w-full relative">
+                  {tours.map((tour, idx) => (
+                    <img
+                      key={tour.id}
+                      src={tour.image}
+                      alt={tour.title}
+                      className="w-full h-full object-cover absolute inset-0 transition-opacity duration-500 ease-in-out motion-reduce:transition-none"
+                      style={{ opacity: idx === currentIndex ? 1 : 0 }}
+                    />
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Text: every slide sits in the same grid cell, so the height is always
+                  the tallest slide and the page never jumps between slides.
+                  lg+: pl-12 and w-[calc(100%+100px)] at 1920, scaled with --u. */}
+              <div className="grid text-slate-800 lg:col-span-6 lg:pl-[calc(var(--u)_*_2.5)] lg:w-[calc(100%_+_var(--u)_*_5.208)]">
+                {tours.map((tour, idx) => {
+                  const active = idx === currentIndex;
+                  return (
+                    <div
+                      key={tour.id}
+                      aria-hidden={!active}
+                      className={`col-start-1 row-start-1 self-center transition-opacity duration-500 ease-in-out motion-reduce:transition-none ${
+                        active ? "opacity-100" : "opacity-0 pointer-events-none"
+                      }`}
+                    >
+                      <h3
+                        className={`text-[24px] font-normal leading-snug mb-4`}
+                        style={{
+                          fontFamily: "var(--font-seasons), Georgia, serif",
+                        }}
+                      >
+                        {tour.title}
+                      </h3>
+                      <p
+                        className={`text-[16px] leading-relaxed font-serif font-light mb-6`}
+                        style={{
+                          fontFamily:
+                            "var(--font-merriweather), Georgia, serif",
+                        }}
+                      >
+                        {tour.description}
+                      </p>
+                      <div>
+                        <a
+                          href={`/itinerary/${tour.slug}`}
+                          tabIndex={active ? 0 : -1}
+                          className={`animate-fade-in inline-flex items-center justify-center tracking-widest rounded-one border text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:border-[#5B3231] hover:text-[#5B3231] active:scale-95`}
+                          style={{
+                            fontFamily:
+                              "var(--font-merriweather), Georgia, serif",
+                          }}
+                        >
+                          View This Trip
+                        </a>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation buttons - outside grey background, right-aligned */}
+      {/* Navigation buttons: centered on mobile, right edge aligned with the panel on lg+ */}
       <div className="relative z-10">
-        <div className="flex justify-end items-center space-x-3 pt-6 pb-4 -mr-4 sm:-mr-6 md:-mr-8 lg:-mr-[50px]">
+        <div className="flex justify-center lg:justify-end items-center gap-3 lg:gap-[calc(var(--u)_*_0.625)] pt-6 lg:pt-[calc(var(--u)_*_1.25_+_var(--extra))] pb-4 lg:-mr-[calc(var(--u)_*_2.604)]">
           <button
             onClick={handlePrev}
             aria-label="Previous tour"
-            className="relative overflow-hidden w-10 h-10 rounded-full border border-[#8B5A52] bg-transparent text-[#8B5A52] flex items-center justify-center *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-[#D9D9D9] focus:outline-none"
+            className={tourNavBtn}
           >
-            <ChevronLeft className="w-4 h-4 stroke-[1.5]" />
+            <ChevronLeft className={tourNavIcon} />
           </button>
           <button
             onClick={handleNext}
             aria-label="Next tour"
-            className="relative overflow-hidden w-10 h-10 rounded-full border border-[#8B5A52] bg-transparent text-[#8B5A52] flex items-center justify-center *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-[#D9D9D9] focus:outline-none"
+            className={tourNavBtn}
           >
-            <ChevronRight className="w-4 h-4 stroke-[1.5]" />
+            <ChevronRight className={tourNavIcon} />
           </button>
         </div>
       </div>
@@ -945,7 +966,18 @@ function ToursCarousel({ tours }: { tours: typeof toursData }) {
 function ToursSection() {
   return (
     <FadeIn>
-      <section className="relative overflow-hidden font-serif select-none">
+      <section
+        className="relative overflow-hidden font-serif select-none"
+        style={
+          {
+            "--u": "min(1vw, 25.6px)",
+            // EXTRA GREY HEIGHT: how much taller the grey panel is on the top AND bottom.
+            // 5.208 = 100px at 1920. Change only this number (px / 19.2): 150px = 7.812, 200px = 10.417, 0 = original.
+            "--extra": "calc(var(--u) * 5.208)",
+          } as React.CSSProperties
+        }
+      >
+        {/* Watermark logo (1459x1275 at 1920, shifted 350px right / 160px up) */}
         <div
           className="absolute top-1/2 -right-1 opacity-5 pointer-events-none"
           style={{
@@ -959,7 +991,7 @@ function ToursSection() {
           />
         </div>
 
-        {/* Content wrapper - move this independently */}
+        {/* Content wrapper: max-w stops the layout growing past 2560px */}
         <div className="relative z-10 pl-4 sm:pl-6 md:pl-[27px] pr-4 sm:pr-6 md:pr-[25px] lg:pr-[0]">
           {/* Add padding/margin to move content down */}
           <div className="pt-20 sm:pt-24 md:pt-32 lg:pt-40 pb-24">
@@ -989,7 +1021,7 @@ function ToursSection() {
                 </p>
               </div>
 
-              <div className="relative  md:pt-12">
+              <div className="relative md:pt-12 lg:pt-[calc(var(--u)_*_2.5_+_var(--extra))]">
                 <ToursCarousel tours={toursData} />
               </div>
             </div>
@@ -1217,7 +1249,7 @@ function ReelsSection() {
                   Products in Reels
                 </h2>
                 <p
-                  className="text-[16px] font-serif text-black/70 max-w-md"
+                  className="text-[16px] font-serif text-black/70 max-w-md pt-[30px]"
                   style={{
                     fontFamily: "var(--font-merriweather), Georgia, serif",
                   }}
@@ -1333,22 +1365,23 @@ function ImpactSection() {
 
   return (
     <FadeIn>
-      <section className="py-16 sm:py-20 md:py-28 lg:py-30 lg:pb-55 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] bg-[#D9D9D9] text-slate-800">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-30 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-0 bg-[#D9D9D9] text-slate-800">
         <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
           {/* Images Collage */}
-          <FadeIn className="hidden lg:block lg:col-span-5 relative mb-20 sm:mb-24 lg:mb-0">
-            <div className="w-3/4 aspect-3/4 overflow-hidden mx-auto lg:mx-0">
+          <FadeIn className="hidden lg:block lg:col-span-5">
+            <div className="w-3/4 aspect-[3/4] overflow-hidden">
               <img
-                src="/fonts/images/RedPanda.webp"
+                src="/fonts/images/footerImage/first photo.jpg"
                 alt="Artisan at work"
                 className="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <div className="w-3/4 aspect-4/3 overflow-hidden mx-auto mt-6 relative lg:absolute lg:right-10 lg:-bottom-50 lg:mt-0 lg:mx-0">
+
+            <div className="w-3/4 aspect-[4/3] overflow-hidden ml-auto mr-10 -mt-30">
               <img
-                src="/fonts/images/clay pot.webp"
+                src="/fonts/images/footerImage/Overlap Photo.jpg"
                 alt="Mask carving"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -1360,7 +1393,7 @@ function ImpactSection() {
           {/* Text & Accordion */}
           <FadeIn
             delay={150}
-            className="lg:col-span-7 space-y-6 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
+            className="lg:col-span-7 space-y-4 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
           >
             <span
               className="block w-fit text-[16px] sm:text-[18px] lg:text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
@@ -1375,7 +1408,7 @@ function ImpactSection() {
               Beyond Travel, <br /> We Create Impact
             </h2>
             <p
-              className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed"
+              className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed pt-[30px]"
               style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
             >
               A love for people, the world, humanity, and the environment, along{" "}
@@ -1606,7 +1639,7 @@ function TestimonialsSection() {
               </CarouselContent>
 
               <CarouselNavigation
-                className="absolute inset-x-0 top-1/2 -translate-y-1/2 justify-between px-1"
+                className="hidden md:flex absolute inset-x-0 top-1/2 -translate-y-1/2 justify-between px-1"
                 classNameButton="relative overflow-hidden border border-[#8B5A52] bg-transparent text-[#8B5A52] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-white"
                 alwaysShow
               />
