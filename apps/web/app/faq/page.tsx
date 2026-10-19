@@ -12,6 +12,7 @@ import {
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FadeIn from "@/components/common/FadeIn";
 
 // --- FAQ Hero ---
 function FaqHero() {
@@ -25,14 +26,16 @@ function FaqHero() {
       <div className="absolute inset-0 bg-black/20" />
 
       <div className="relative z-10 px-6">
-        <h1
-          className="text-[52px] tracking-wide font-normal"
-          style={{
-            fontFamily: "var(--font-seasons), Georgia, serif",
-          }}
-        >
-          FAQ
-        </h1>
+        <FadeIn>
+          <h1
+            className="text-[52px] tracking-wide font-normal"
+            style={{
+              fontFamily: "var(--font-seasons), Georgia, serif",
+            }}
+          >
+            FAQ
+          </h1>
+        </FadeIn>
       </div>
     </section>
   );
@@ -429,52 +432,54 @@ function SupportCalloutSection() {
   return (
     <section className="py-40 px-6 md:px-[50px] bg-[#D9D9D9] text-slate-800 text-center">
       <div className="max-w-3xl mx-auto">
-        <div>
-          <h2
-            className="font-serif text-[36px] font-normal"
-            style={{
-              fontFamily: "var(--font-seasons), serif",
-              color: "rgba(0, 0, 0, 0.8)",
-            }}
-          >
-            Still have questions?
-          </h2>
+        <FadeIn>
+          <div>
+            <h2
+              className="font-serif text-[36px] font-normal"
+              style={{
+                fontFamily: "var(--font-seasons), serif",
+                color: "rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              Still have questions?
+            </h2>
 
-          <p
-            className="font-serif text-[16px] leading-relaxed mt-10"
-            style={{
-              fontFamily: "var(--font-merriweather), serif",
-              color: "#000000",
-            }}
-          >
-            If you cannot find answer to your question in our FAQ, you can
-            always contact us.
-            <br />
-            We will answer to you shortly! Meet our Support team
-          </p>
-
-          <div
-            className="pt-8 font-serif text-[16px] space-y-2"
-            style={{
-              fontFamily: "var(--font-seasons), serif",
-              color: "rgba(0, 0, 0, 0.8)",
-            }}
-          >
-            <p>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@yaksandnomads.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                hello@yaksandnomads.com
-              </a>
+            <p
+              className="font-serif text-[16px] leading-relaxed mt-10"
+              style={{
+                fontFamily: "var(--font-merriweather), serif",
+                color: "#000000",
+              }}
+            >
+              If you cannot find answer to your question in our FAQ, you can
+              always contact us.
+              <br />
+              We will answer to you shortly! Meet our Support team
             </p>
 
-            <p>
-              <a href="tel:+97517000000">(+975) 17000000</a>
-            </p>
+            <div
+              className="pt-8 font-serif text-[16px] space-y-2"
+              style={{
+                fontFamily: "var(--font-seasons), serif",
+                color: "rgba(0, 0, 0, 0.8)",
+              }}
+            >
+              <p>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@yaksandnomads.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  hello@yaksandnomads.com
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+97517000000">(+975) 17000000</a>
+              </p>
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

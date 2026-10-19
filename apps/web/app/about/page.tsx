@@ -35,10 +35,9 @@ function AboutHero() {
     <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover"
+        className="absolute inset-0 bg-cover bg-center md:bg-[position:center_calc(25%)]"
         style={{
           backgroundImage: `url('/fonts/images/AboutUsHero.webp')`,
-          backgroundPosition: "center calc(50% - 100px)",
         }}
       />
 
@@ -453,6 +452,32 @@ function PartnerSection() {
               ))}
             </div>
           </FadeIn>
+          {/* Mobile images (phones and tablets only, stacked, no overlap) */}
+          <div className="flex w-full flex-col gap-4 pl-2 sm:pl-4 pr-2 sm:pr-4 lg:hidden">
+            <FadeIn>
+              <div className="aspect-[3/4] w-full overflow-hidden">
+                <img
+                  src="/fonts/images/Work with Us_1.webp"
+                  alt="Artisan at work"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={150}>
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="/fonts/images/Work with Us.webp"
+                  alt="Mask carving"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </FadeIn>

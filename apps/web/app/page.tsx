@@ -334,107 +334,105 @@ function IntroStatementSection() {
 
 function AboutSection() {
   return (
-    <FadeIn>
-      <section className="relative pt-30 pt-[clamp(120px,8vw,180px)] pb-[clamp(80px,6vw,240px)] pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[0px] text-slate-800">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50 will-change-transform"
-          style={{
-            backgroundImage: "url('/fonts/images/adventure_awaitsbg.webp')",
-            transform: "translateZ(0)",
-          }}
-        />
-        <div className="absolute inset-0 bg-linear-to-br from-sky-100/30 via-sky-50/20 to-blue-100/30" />
-        <div className="relative z-10">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-4">
-            <FadeIn className="space-y-4 text-black/70 font-serif leading-relaxed text-[16px] ">
-              <div
-                style={{
-                  fontFamily: "var(--font-merriweather), Georgia, serif",
-                }}
+    <section className="relative pt-30 pt-[clamp(120px,8vw,180px)] pb-[clamp(80px,6vw,240px)] px-6 md:pl-[50px] md:pr-[0px] text-slate-800">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-50 will-change-transform"
+        style={{
+          backgroundImage: "url('/fonts/images/adventure_awaitsbg.webp')",
+          transform: "translateZ(0)",
+        }}
+      />
+      <div className="absolute inset-0 bg-linear-to-br from-sky-100/30 via-sky-50/20 to-blue-100/30" />
+      <div className="relative z-10">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-4">
+          <FadeIn className="space-y-4 text-black/70 font-serif leading-relaxed text-[16px] ">
+            <div
+              style={{
+                fontFamily: "var(--font-merriweather), Georgia, serif",
+              }}
+            >
+              <span
+                className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
+                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
               >
-                <span
-                  className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
-                  style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-                >
-                  Adventure Awaits
-                </span>
-                <h2
-                  className="font-serif text-[36px] text-black/80 leading-tight pt-2 tracking-wide "
-                  style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-                >
-                  Travel to Bhutan.
-                  <br />
-                  Return Rewritten.
-                </h2>
+                Adventure Awaits
+              </span>
+              <h2
+                className="font-serif text-[36px] text-black/80 leading-tight pt-2 tracking-wide "
+                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+              >
+                Travel to Bhutan.
+                <br />
+                Return Rewritten.
+              </h2>
 
-                <p className="leading-normal pt-[50px] pr-0 md:pr-50 ">
-                  Here, travel is more than simply visiting a destination—it is
-                  an immersion into a different way of being. In this majestic
-                  Himalayan Kingdom, wealth isn't measured in material
-                  possessions, but in the quality of life itself.
-                  <br />
-                  <br />
-                  As a proudly carbon-negative nation, Bhutan has fiercely
-                  guarded its pristine forests and ecosystems for generations.
-                  Here, the pioneering philosophy of Gross National Happiness
-                  ensures that progress never comes at the cost of well-being or
-                  sustainability.
-                  <br />
-                  <br />
-                  Beyond the fresh mountain air and dramatic landscapes lies a
-                  deeply rooted cultural heritage waiting to be discovered.
-                  <br />
-                  <br />
-                  Yaks & Nomads invites you to experience Bhutan travel. Come
-                  see the world differently, and find a deeper kind of
-                  happiness.
-                </p>
+              <p className="leading-normal pt-[50px] pr-0 md:pr-50 ">
+                Here, travel is more than simply visiting a destination—it is an
+                immersion into a different way of being. In this majestic
+                Himalayan Kingdom, wealth isn't measured in material
+                possessions, but in the quality of life itself.
+                <br />
+                <br />
+                As a proudly carbon-negative nation, Bhutan has fiercely guarded
+                its pristine forests and ecosystems for generations. Here, the
+                pioneering philosophy of Gross National Happiness ensures that
+                progress never comes at the cost of well-being or
+                sustainability.
+                <br />
+                <br />
+                Beyond the fresh mountain air and dramatic landscapes lies a
+                deeply rooted cultural heritage waiting to be discovered.
+                <br />
+                <br />
+                Yaks & Nomads invites you to experience Bhutan travel. Come see
+                the world differently, and find a deeper kind of happiness.
+              </p>
 
-                <div className="pt-[50px]">
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    Let's Talk
-                  </a>
-                </div>
+              <div className="pt-[50px]">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#5B3231]  text-[#5B3231] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-white hover:text-white active:scale-95"
+                  style={{
+                    fontFamily: "var(--font-merriweather), Georgia, serif",
+                  }}
+                >
+                  Let's Talk
+                </a>
               </div>
-            </FadeIn>
-            {/* Image collage — only image sizing and positioning adjusted */}
-            <FadeIn delay={150} className="relative hidden min-w-0 lg:block">
-              {/* Collage wrapper */}
-              <div className="relative w-full">
-                {/* Image container — keep the existing height */}
-                <div
-                  className="
+            </div>
+          </FadeIn>
+          {/* Desktop collage (original, untouched) */}
+          <FadeIn delay={150} className="relative hidden min-w-0 lg:block">
+            {/* Collage wrapper */}
+            <div className="relative w-full">
+              {/* Image container — keep the existing height */}
+              <div
+                className="
         relative
         w-full
         h-[clamp(600px,53vw,1011px)]
       "
-                >
-                  {/* Large square image */}
-                  <div
-                    className="
+              >
+                {/* Large square image */}
+                <div
+                  className="
           absolute top-0 right-0
           w-[clamp(560px,calc(15.39vw+423.79px),645.41px)]
           min-[1440px]:w-[clamp(645.41px,calc(33.62vw+161.28px),806.78px)]
           aspect-square overflow-hidden rounded-one shadow-lg
         "
-                  >
-                    <img
-                      src="/fonts/images/adventureAwaits/bigPhoto.jpg"
-                      alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
-                      className="block h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
+                >
+                  <img
+                    src="/fonts/images/adventureAwaits/bigPhoto.jpg"
+                    alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
+                    className="block h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
 
-                  {/* Small overlapping landscape image */}
-                  <div
-                    className="
+                {/* Small overlapping landscape image */}
+                <div
+                  className="
           absolute
           top-[clamp(441.8px,calc(12.15vw+334.57px),509.5px)]
           min-[1440px]:top-[clamp(509.5px,calc(26.54vw+127.33px),636.9px)]
@@ -444,30 +442,57 @@ function AboutSection() {
           min-[1440px]:w-[clamp(433.53px,calc(22.58vw+108.3px),541.91px)]
           aspect-[1.334] overflow-hidden rounded-one shadow-xl
         "
-                  >
-                    <img
-                      src="/fonts/images/adventureAwaits/smallPhoto.jpg"
-                      alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
-                      className="block h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
+                >
+                  <img
+                    src="/fonts/images/adventureAwaits/smallPhoto.jpg"
+                    alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
+                    className="block h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
+              </div>
 
-                {/* Bottom spacing — outside the fixed-height image container */}
-                <div
-                  aria-hidden="true"
-                  className="
+              {/* Bottom spacing — outside the fixed-height image container */}
+              <div
+                aria-hidden="true"
+                className="
         h-[clamp(120px,8vw,180px)]
         min-[1920px]:h-[40px]
       "
+              />
+            </div>
+          </FadeIn>
+
+          {/* Mobile collage (phones and tablets only, stacked, no overlap) */}
+          <FadeIn
+            delay={150}
+            className="relative block min-w-0 pt-10 lg:hidden"
+          >
+            <div className="flex w-full flex-col gap-4">
+              {/* Large square image */}
+              <div className="aspect-square w-full overflow-hidden rounded-one shadow-lg">
+                <img
+                  src="/fonts/images/adventureAwaits/bigPhoto.jpg"
+                  alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
+                  className="block h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
-            </FadeIn>
-          </div>
+
+              {/* Landscape image */}
+              <div className="aspect-[1.334] w-full overflow-hidden rounded-one shadow-xl">
+                <img
+                  src="/fonts/images/adventureAwaits/smallPhoto.jpg"
+                  alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
+                  className="block h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </FadeIn>
         </div>
-      </section>
-    </FadeIn>
+      </div>
+    </section>
   );
 }
 // --- Section 3: Out-Of-The-Box Experiences ---
@@ -546,232 +571,226 @@ function ExperienceDots() {
 
 function ExperiencesSection() {
   return (
-    <FadeIn>
-      <section className="py-32 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[45px] bg-[#D9D9D9] overflow-hidden">
-        <div>
-          <Carousel
-            opts={{ duration: 75, loop: true } as any}
-            autoplay
-            autoplayInterval={4000}
-          >
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              <FadeIn className="lg:col-span-4 min-w-0 space-y-4">
-                <span
-                  className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
-                  style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-                >
-                  Our Advantage
-                </span>
-                <h2
-                  className="font-serif text-[36px] text-black/80 leading-tight"
-                  style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-                >
-                  Out-Of-The-Box <br /> Activities.
-                </h2>
-                <p
-                  className="text-[16px] text-black/70 font-serif leading-relaxed max-w-xs pt-[30px]"
-                  style={{
-                    fontFamily: "var(--font-merriweather), Georgia, serif",
-                  }}
-                >
-                  Go beyond conventional travel with private journeys that
-                  immerse you in innovative, out-of-the-box experiences.
-                  Discover hidden gems, connect with local communities, and
-                  enjoy bespoke adventures tailored to your interests.
-                </p>
+    <section className="py-32 px-6 md:pl-[50px] md:pr-[45px] bg-[#D9D9D9] overflow-hidden">
+      <div>
+        <Carousel
+          opts={{ duration: 75, loop: true } as any}
+          autoplay
+          autoplayInterval={4000}
+        >
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <FadeIn className="lg:col-span-4 min-w-0 space-y-4">
+              <span
+                className="block w-fit text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
+                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+              >
+                Our Advantage
+              </span>
+              <h2
+                className="font-serif text-[36px] text-black/80 leading-tight"
+                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+              >
+                Out-Of-The-Box <br /> Activities.
+              </h2>
+              <p
+                className="text-[16px] text-black/70 font-serif leading-relaxed max-w-xs pt-[30px]"
+                style={{
+                  fontFamily: "var(--font-merriweather), Georgia, serif",
+                }}
+              >
+                Go beyond conventional travel with private journeys that immerse
+                you in innovative, out-of-the-box experiences. Discover hidden
+                gems, connect with local communities, and enjoy bespoke
+                adventures tailored to your interests.
+              </p>
 
-                {/* <CarouselNavigation
+              {/* <CarouselNavigation
                   className="static gap-2 pt-[30px]"
                   classNameButton="relative overflow-hidden border border-[#8B5A52] bg-transparent text-[#8B5A52] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-[#D9D9D9]"
                   alwaysShow
                 /> */}
-              </FadeIn>
+            </FadeIn>
 
-              <FadeIn delay={150} className="lg:col-span-8 min-w-0">
-                <CarouselContent className="-ml-2 -mr-2">
-                  {EXPERIENCES.map((exp) => (
-                    <CarouselItem
-                      key={exp.title}
-                      className="basis-full sm:basis-1/2 pr-4"
-                    >
-                      <div className="block bg-white shadow-sm overflow-hidden h-full group transition-[transform,box-shadow] duration-300 ease-out">
-                        <div className="aspect-4/5 bg-slate-200 overflow-hidden">
-                          <img
-                            src={exp.image}
-                            alt={exp.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                          />
-                        </div>
-                        <div className="p-6 md:p-8">
-                          <h3
-                            className="font-serif text-[18px] text-[#8B5A52] group-hover:text-[#5B3231] transition-colors"
-                            style={{
-                              fontFamily:
-                                "var(--font-merriweather), Georgia, serif",
-                            }}
-                          >
-                            {exp.title}
-                          </h3>
-                          <p
-                            className="text-[16px] text-black mt-3 font-serif leading-relaxed"
-                            style={{
-                              fontFamily:
-                                "var(--font-merriweather), Georgia, serif",
-                            }}
-                          >
-                            {exp.description}
-                          </p>
-                        </div>
+            <FadeIn delay={150} className="lg:col-span-8 min-w-0">
+              <CarouselContent className="-ml-2 -mr-2">
+                {EXPERIENCES.map((exp) => (
+                  <CarouselItem
+                    key={exp.title}
+                    className="basis-full sm:basis-1/2 pr-4"
+                  >
+                    <div className="block bg-white shadow-sm overflow-hidden h-full group transition-[transform,box-shadow] duration-300 ease-out">
+                      <div className="aspect-4/5 bg-slate-200 overflow-hidden">
+                        <img
+                          src={exp.image}
+                          alt={exp.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                        />
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </FadeIn>
-            </div>
-          </Carousel>
-        </div>
-      </section>
-    </FadeIn>
+                      <div className="p-6 md:p-8">
+                        <h3
+                          className="font-serif text-[18px] text-[#8B5A52] group-hover:text-[#5B3231] transition-colors"
+                          style={{
+                            fontFamily:
+                              "var(--font-merriweather), Georgia, serif",
+                          }}
+                        >
+                          {exp.title}
+                        </h3>
+                        <p
+                          className="text-[16px] text-black mt-3 font-serif leading-relaxed"
+                          style={{
+                            fontFamily:
+                              "var(--font-merriweather), Georgia, serif",
+                          }}
+                        >
+                          {exp.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </FadeIn>
+          </div>
+        </Carousel>
+      </div>
+    </section>
   );
 }
 
 // --- Section 4: Featured Adventure / Festival ---
 function FeaturedSection() {
   return (
-    <FadeIn>
-      <section className="relative py-20 md:py-28 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[45px] text-white bg-slate-900 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-bottom will-change-transform"
-          style={{
-            backgroundImage: `url('/fonts/images/landingRoyalhighlandfestivalsection.webp')`,
-            transform: "translateZ(0)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(102, 102, 102, 0) 100%)",
-          }}
-        />
+    <section className="relative py-20 md:py-28 px-6 md:pl-[50px] md:pr-[45px] text-white bg-slate-900 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-bottom will-change-transform"
+        style={{
+          backgroundImage: `url('/fonts/images/landingRoyalhighlandfestivalsection.webp')`,
+          transform: "translateZ(0)",
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(102, 102, 102, 0) 100%)",
+        }}
+      />
 
-        <FadeIn className="relative z-10">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-4 lg:col-span-5 md:flex md:flex-col md:items-center md:text-center lg:block lg:text-left">
-              <span
-                className="block w-fit md:mx-auto lg:mx-0 text-[16px] uppercase tracking-widest text-[#FFFFFF] font-normal"
-                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-              >
-                FEATURED ADVENTURE
-              </span>
-              <h2
-                className="font-serif text-[36px] text-[#FFFFFF] leading-tight "
-                style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-              >
-                The Royal Highland <br /> Festival
-              </h2>
-              <p
-                className="text-[16px] text-[#FFFFFF] font-serif leading-relaxed max-w-[400px] md:mx-auto lg:mx-0 pt-[30px]"
+      <FadeIn className="relative z-10">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-4 lg:col-span-5 md:flex md:flex-col md:items-center md:text-center lg:block lg:text-left">
+            <span
+              className="block w-fit md:mx-auto lg:mx-0 text-[16px] uppercase tracking-widest text-[#FFFFFF] font-normal"
+              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+            >
+              FEATURED ADVENTURE
+            </span>
+            <h2
+              className="font-serif text-[36px] text-[#FFFFFF] leading-tight "
+              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+            >
+              The Royal Highland <br /> Festival
+            </h2>
+            <p
+              className="text-[16px] text-[#FFFFFF] font-serif leading-relaxed max-w-[400px] md:mx-auto lg:mx-0 pt-[30px]"
+              style={{
+                fontFamily: "var(--font-merriweather), Georgia, serif",
+              }}
+            >
+              Held at 4,000 meters above sea level, the festival showcases the
+              rich traditions, resilience, and lifestyle of highland herders.
+            </p>
+            <div className="pt-[30px]">
+              <a
+                href="/itinerary/royal-highland-festival"
+                className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#FFFFFF]  text-[#FFFFFF] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-[#5B3231] hover:text-white active:scale-95"
                 style={{
                   fontFamily: "var(--font-merriweather), Georgia, serif",
                 }}
               >
-                Held at 4,000 meters above sea level, the festival showcases the
-                rich traditions, resilience, and lifestyle of highland herders.
-              </p>
-              <div className="pt-[30px]">
-                <a
-                  href="/itinerary/royal-highland-festival"
-                  className="inline-flex items-center justify-center tracking-widest rounded-one border border-[#FFFFFF]  text-[#FFFFFF] text-[14px] px-5 md:px-6 py-2.5 transition-[background-color,border-color,color,transform] duration-300 ease-out hover:bg-[#5B3231] hover:border-[#5B3231] hover:text-white active:scale-95"
+                View This Trip
+              </a>
+            </div>
+          </div>
+
+          {/* Press Card - Fixed alignment */}
+          <div className="lg:col-span-7 flex justify-end md:justify-center lg:justify-end">
+            <div className="bg-[#A8735D]/50 w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
+              <div className="space-y-3 text-center">
+                <h3
+                  className="font-serif text-[28px] text-white"
+                  style={{
+                    fontFamily: "var(--font-seasons), Georgia, serif",
+                  }}
+                >
+                  <a
+                    href="https://www.nationalgeographic.com/travel/article/royal-highland-festival-laya-bhutans-remote-spiritual-side"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="no-underline hover:text-white/80 transition-colors"
+                  >
+                    National Geographic
+                  </a>
+                </h3>
+                <p
+                  className="font-serif text-[16px] text-white/80 leading-relaxed"
                   style={{
                     fontFamily: "var(--font-merriweather), Georgia, serif",
                   }}
                 >
-                  View This Trip
-                </a>
+                  Find Bhutan's spiritual side at this remote highland festival
+                </p>
+                <p
+                  className="font-serif text-[16px] text-white/70"
+                  style={{
+                    fontFamily: "var(--font-merriweather), Georgia, serif",
+                  }}
+                >
+                  By Angela Locatelli <br /> Published August 24, 2025
+                </p>
               </div>
-            </div>
 
-            {/* Press Card - Fixed alignment */}
-            <div className="lg:col-span-7 flex justify-end md:justify-center lg:justify-end">
-              <div className="bg-[#A8735D]/50 w-full max-w-[600px] px-6 pt-6 pb-5 md:px-[75px] md:pt-[100px] md:pb-[80px] space-y-6 md:space-y-8 min-h-[300px] md:min-h-[400px] lg:min-h-[768px] items-center flex flex-col justify-center">
-                <div className="space-y-3 text-center">
-                  <h3
-                    className="font-serif text-[28px] text-white"
-                    style={{
-                      fontFamily: "var(--font-seasons), Georgia, serif",
-                    }}
+              <div className="space-y-3 text-center pt-10 md:pt-8">
+                <h3
+                  className="font-serif text-[28px] text-white"
+                  style={{
+                    fontFamily: "var(--font-seasons), Georgia, serif",
+                  }}
+                >
+                  <a
+                    href="https://www.scmp.com/lifestyle/travel-leisure/article/3259043/bhutans-royal-highland-festival-colourful-high-altitude-mix-music-dance-and-sport"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="no-underline hover:text-white/80 transition-colors"
                   >
-                    <a
-                      href="https://www.nationalgeographic.com/travel/article/royal-highland-festival-laya-bhutans-remote-spiritual-side"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="no-underline hover:text-white/80 transition-colors"
-                    >
-                      National Geographic
-                    </a>
-                  </h3>
-                  <p
-                    className="font-serif text-[16px] text-white/80 leading-relaxed"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    Find Bhutan's spiritual side at this remote highland
-                    festival
-                  </p>
-                  <p
-                    className="font-serif text-[16px] text-white/70"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    By Angela Locatelli <br /> Published August 24, 2025
-                  </p>
-                </div>
-
-                <div className="space-y-3 text-center pt-10 md:pt-8">
-                  <h3
-                    className="font-serif text-[28px] text-white"
-                    style={{
-                      fontFamily: "var(--font-seasons), Georgia, serif",
-                    }}
-                  >
-                    <a
-                      href="https://www.scmp.com/lifestyle/travel-leisure/article/3259043/bhutans-royal-highland-festival-colourful-high-altitude-mix-music-dance-and-sport"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="no-underline hover:text-white/80 transition-colors"
-                    >
-                      South China Morning Post
-                    </a>
-                  </h3>
-                  <p
-                    className="font-serif text-[16px] text-white/80 leading-relaxed"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    Bhutan's Royal Highland Festival is a mix of music, dance
-                    and sport — but it's the altitude that takes your breath
-                    away.
-                  </p>
-                  <p
-                    className="font-serif text-[16px] text-white/70"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    By Julian Ryall <br /> Published April 15, 2024
-                  </p>
-                </div>
+                    South China Morning Post
+                  </a>
+                </h3>
+                <p
+                  className="font-serif text-[16px] text-white/80 leading-relaxed"
+                  style={{
+                    fontFamily: "var(--font-merriweather), Georgia, serif",
+                  }}
+                >
+                  Bhutan's Royal Highland Festival is a mix of music, dance and
+                  sport — but it's the altitude that takes your breath away.
+                </p>
+                <p
+                  className="font-serif text-[16px] text-white/70"
+                  style={{
+                    fontFamily: "var(--font-merriweather), Georgia, serif",
+                  }}
+                >
+                  By Julian Ryall <br /> Published April 15, 2024
+                </p>
               </div>
             </div>
           </div>
-        </FadeIn>
-      </section>
-    </FadeIn>
+        </div>
+      </FadeIn>
+    </section>
   );
 }
 
@@ -992,7 +1011,7 @@ function ToursSection() {
         </div>
 
         {/* Content wrapper: max-w stops the layout growing past 2560px */}
-        <div className="relative z-10 pl-1 sm:pl-6 md:pl-[27px] pr-1 sm:pr-6 md:pr-[25px] lg:pr-[0]">
+        <div className="relative z-10 px-2 md:pl-[27px] md:pr-[25px] lg:pr-[0]">
           {/* Add padding/margin to move content down */}
           <div className="pt-20 sm:pt-24 md:pt-32 lg:pt-40 pb-24">
             <div className="space-y-8 px-4 sm:px-8 md:px-12 lg:px-24">
@@ -1032,110 +1051,30 @@ function ToursSection() {
   );
 }
 
+// --- Reel Data ---
+const REELS = [
+  { id: "1231541917", title: "Hiking in Bhutan" },
+  { id: "1231539629", title: "Homestay in Bhutan" },
+  { id: "1231538788", title: "Traditional Hot Stone Bath" },
+  { id: "1231537682", title: "Tiger's Nest Monastery Hike" },
+  { id: "1231535943", title: "Monastic Chanting" },
+  { id: "1231533894", title: "Royal Highland Festival" },
+  { id: "1231533376", title: "Mask Dance in Bhutan" },
+  { id: "1231537067", title: "Bhutanese food preparation" },
+];
+
+const VIMEO_BASE_PARAMS =
+  "title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479";
+
 // --- Reel Overlay ---
 function ReelOverlay({
-  reelNumber,
+  reelIndex,
   onClose,
 }: {
-  reelNumber: number;
+  reelIndex: number;
   onClose: () => void;
 }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isEnded, setIsEnded] = useState(false);
-  const [showIcon, setShowIcon] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const onPlay = () => {
-      setIsPaused(false);
-      setIsEnded(false);
-    };
-    const onPause = () => {
-      setIsPaused(true);
-    };
-    const onEnded = () => {
-      setIsEnded(true);
-      setIsPaused(true);
-    };
-    const onLoadedMetadata = () => {
-      setDuration(video.duration);
-    };
-    const onTimeUpdate = () => {
-      setCurrentTime(video.currentTime);
-      setProgress(
-        video.duration ? (video.currentTime / video.duration) * 100 : 0,
-      );
-    };
-
-    video.addEventListener("play", onPlay);
-    video.addEventListener("pause", onPause);
-    video.addEventListener("ended", onEnded);
-    video.addEventListener("loadedmetadata", onLoadedMetadata);
-    video.addEventListener("timeupdate", onTimeUpdate);
-
-    return () => {
-      video.removeEventListener("play", onPlay);
-      video.removeEventListener("pause", onPause);
-      video.removeEventListener("ended", onEnded);
-      video.removeEventListener("loadedmetadata", onLoadedMetadata);
-      video.removeEventListener("timeupdate", onTimeUpdate);
-    };
-  }, []);
-
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const sec = Math.floor(s % 60);
-    return `${m}:${sec.toString().padStart(2, "0")}`;
-  };
-
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (isEnded) {
-      video.currentTime = 0;
-      video.play();
-      setIsEnded(false);
-      return;
-    }
-    if (video.paused) {
-      video.play();
-      setShowIcon(true);
-      if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
-      hideTimerRef.current = setTimeout(() => setShowIcon(false), 1500);
-    } else {
-      video.pause();
-      setShowIcon(true);
-    }
-  };
-
-  const restart = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.currentTime = 0;
-    video.play();
-    setIsEnded(false);
-    setShowIcon(true);
-    if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
-    hideTimerRef.current = setTimeout(() => setShowIcon(false), 1500);
-  };
-
-  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
-    const video = videoRef.current;
-    const bar = progressRef.current;
-    if (!video || !bar) return;
-    const rect = bar.getBoundingClientRect();
-    const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-    const percent = x / rect.width;
-    video.currentTime = percent * video.duration;
-  };
+  const reel = REELS[reelIndex];
 
   return (
     <div
@@ -1143,74 +1082,17 @@ function ReelOverlay({
       onClick={onClose}
     >
       <div
-        className="relative h-[85vh] w-auto"
+        className="relative h-[85vh] aspect-[9/16] max-w-[95vw]"
         onClick={(e) => e.stopPropagation()}
       >
-        <video
-          ref={videoRef}
-          src={`/fonts/videos/reel${reelNumber}.webm`}
-          className="h-full w-auto object-contain rounded-xl"
-          autoPlay
-          muted
-          playsInline
-          onClick={togglePlay}
+        <iframe
+          src={`https://player.vimeo.com/video/${reel.id}?${VIMEO_BASE_PARAMS}&autoplay=1&muted=1`}
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title={reel.title}
         />
-
-        {isEnded ? (
-          <div
-            className="absolute inset-0 flex items-center justify-center cursor-pointer"
-            onClick={restart}
-          >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-black/40 backdrop-blur-md">
-              <RotateCcw className="h-7 w-7 text-white" />
-            </div>
-          </div>
-        ) : isPaused ? (
-          <div
-            className="absolute inset-0 flex items-center justify-center cursor-pointer"
-            onClick={togglePlay}
-          >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-black/40 backdrop-blur-md transition-opacity duration-300">
-              <Play className="h-7 w-7 fill-white text-white translate-x-0.5" />
-            </div>
-          </div>
-        ) : showIcon ? (
-          <div
-            className="absolute inset-0 flex items-center justify-center cursor-pointer pointer-events-none"
-            onClick={togglePlay}
-          >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-black/40 backdrop-blur-md animate-fade-out">
-              <Pause className="h-7 w-7 fill-white text-white" />
-            </div>
-          </div>
-        ) : null}
-
-        <div className="absolute bottom-0 left-0 right-0 px-4 pb-3 pt-8 bg-gradient-to-t from-black/60 to-transparent rounded-b-xl">
-          <div
-            ref={progressRef}
-            className="w-full h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer"
-            onClick={handleSeek}
-          >
-            <div
-              className="h-full bg-white rounded-full"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <div className="flex justify-between mt-1">
-            <span
-              className="text-white text-[16px]"
-              style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-            >
-              {formatTime(currentTime)}
-            </span>
-            <span
-              className="text-white text-[16px]"
-              style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-            >
-              {formatTime(duration)}
-            </span>
-          </div>
-        </div>
 
         <div className="absolute top-4 right-4">
           <button
@@ -1232,7 +1114,7 @@ function ReelsSection() {
   return (
     <>
       <FadeIn>
-        <section className="pt-10 pb-50 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[45px] bg-white">
+        <section className="pt-10 pb-50 px-6 md:pl-[50px] md:pr-[45px] bg-white">
           <div className="space-y-16">
             <FadeIn className="flex justify-between items-end">
               <div className="space-y-3">
@@ -1269,21 +1151,23 @@ function ReelsSection() {
               >
                 {/* Removed -ml-4 to eliminate left gap */}
                 <CarouselContent className="">
-                  {[1, 2, 3, 4, 5].map((item) => (
+                  {REELS.map((reel, index) => (
                     <CarouselItem
-                      key={item}
+                      key={reel.id}
                       className="basis-full md:basis-1/3 pl-4"
                     >
                       <div
                         className="group relative aspect-[9/13] rounded-xl shadow-md overflow-hidden bg-teal-900 cursor-pointer"
-                        onClick={() => setActiveReel(item)}
+                        onClick={() => setActiveReel(index)}
                       >
-                        <video
-                          src={`/fonts/videos/reel${item}.webm`}
-                          className="h-full w-full object-cover transition-[filter,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.04] [@media(hover:hover)_and_(pointer:fine)]:group-hover:blur-[2px]"
-                          loop
-                          muted
-                          playsInline
+                        <iframe
+                          src={`https://player.vimeo.com/video/${reel.id}?${VIMEO_BASE_PARAMS}&background=1&autoplay=1&loop=1&muted=1`}
+                          className="pointer-events-none absolute left-0 top-1/2 w-full aspect-[9/16] -translate-y-1/2 transition-[filter,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.04] [@media(hover:hover)_and_(pointer:fine)]:group-hover:blur-[2px]"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          title={reel.title}
+                          loading="lazy"
                         />
                         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-slate-950/0 opacity-0 transition-[background-color,opacity] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-slate-950/20 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100">
                           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/40 bg-white/15 text-white shadow-sm backdrop-blur-md transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-105">
@@ -1297,7 +1181,7 @@ function ReelsSection() {
                               "var(--font-merriweather), Georgia, serif",
                           }}
                         >
-                          Reel {item}
+                          {reel.title}
                         </p>
                       </div>
                     </CarouselItem>
@@ -1318,7 +1202,7 @@ function ReelsSection() {
       {activeReel !== null && (
         <ReelOverlay
           key={activeReel}
-          reelNumber={activeReel}
+          reelIndex={activeReel}
           onClose={() => setActiveReel(null)}
         />
       )}
@@ -1364,12 +1248,114 @@ function ImpactSection() {
   ];
 
   return (
-    <FadeIn>
-      <section className="py-16 sm:py-20 md:py-28 lg:py-30 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-0 bg-[#D9D9D9] text-slate-800">
-        <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
-          {/* Images Collage */}
-          <FadeIn className="hidden lg:block lg:col-span-5">
-            <div className="w-3/4 aspect-[3/4] overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 lg:py-30 px-6 md:pl-[50px] md:pr-0 bg-[#D9D9D9] text-slate-800">
+      <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
+        {/* Images Collage */}
+        <FadeIn className="hidden lg:block lg:col-span-5">
+          <div className="w-3/4 aspect-[3/4] overflow-hidden">
+            <img
+              src="/fonts/images/footerImage/first photo.jpg"
+              alt="Artisan at work"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div className="w-3/4 aspect-[4/3] overflow-hidden ml-auto mr-10 -mt-30">
+            <img
+              src="/fonts/images/footerImage/Overlap Photo.jpg"
+              alt="Mask carving"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </FadeIn>
+
+        {/* Text & Accordion */}
+        <FadeIn
+          delay={150}
+          className="lg:col-span-7 space-y-4 mt-0 sm:mt-12 lg:mt-0 px-0 md:px-6 lg:pl-[50px] lg:pr-[45px]"
+        >
+          <span
+            className="block w-fit text-[16px] sm:text-[18px] lg:text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
+            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+          >
+            Giving Back
+          </span>
+          <h2
+            className="font-serif text-[26px] sm:text-[30px] lg:text-[36px] text-[#000000]/80 leading-tight"
+            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+          >
+            Beyond Travel, <br /> We Create Impact
+          </h2>
+          <p
+            className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed pt-[30px]"
+            style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
+          >
+            A love for people, the world, humanity, and the environment, along{" "}
+            <br className="hidden sm:inline" />
+            with a thoughtful perspective on money and generosity.
+          </p>
+
+          <div className="pt-5 divide-y divide-slate-400/50 border-b border-slate-400/50">
+            {items.map((item, index) => (
+              <div key={index} className="py-6">
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                  aria-expanded={openIndex === index}
+                  className="w-full flex items-center justify-between text-left font-serif text-[15px] sm:text-[16px] font-medium text-[#5B3231]/70 gap-4"
+                  style={{
+                    fontFamily: "var(--font-merriweather), Georgia, serif",
+                  }}
+                >
+                  <span>{item.title}</span>
+                  <span className="relative w-4 h-4 shrink-0">
+                    <Plus
+                      className={`w-4 h-4 text-[#5B3231]/70 absolute inset-0 transition-transform duration-300 ease-out ${
+                        openIndex === index
+                          ? "rotate-90 opacity-0"
+                          : "rotate-0 opacity-100"
+                      }`}
+                    />
+                    <Minus
+                      className={`w-4 h-4 text-[#5B3231]/70 absolute inset-0 transition-transform duration-300 ease-out ${
+                        openIndex === index
+                          ? "rotate-0 opacity-100"
+                          : "-rotate-90 opacity-0"
+                      }`}
+                    />
+                  </span>
+                </button>
+                <div
+                  className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-opacity motion-reduce:duration-200 ${
+                    openIndex === index
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p
+                      className="mt-2 text-[15px] sm:text-[16px] text-black/70 font-serif leading-relaxed"
+                      style={{
+                        fontFamily: "var(--font-merriweather), Georgia, serif",
+                      }}
+                    >
+                      {item.content}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+        {/* Mobile images (phones and tablets only, stacked, no overlap) */}
+        <div className="flex w-full flex-col gap-4 sm:pr-6 md:pr-[50px] lg:hidden">
+          <FadeIn>
+            <div className="aspect-[3/4] w-full overflow-hidden">
               <img
                 src="/fonts/images/footerImage/first photo.jpg"
                 alt="Artisan at work"
@@ -1378,8 +1364,10 @@ function ImpactSection() {
                 decoding="async"
               />
             </div>
+          </FadeIn>
 
-            <div className="w-3/4 aspect-[4/3] overflow-hidden ml-auto mr-10 -mt-30">
+          <FadeIn delay={150}>
+            <div className="aspect-[4/3] w-full overflow-hidden">
               <img
                 src="/fonts/images/footerImage/Overlap Photo.jpg"
                 alt="Mask carving"
@@ -1389,90 +1377,9 @@ function ImpactSection() {
               />
             </div>
           </FadeIn>
-
-          {/* Text & Accordion */}
-          <FadeIn
-            delay={150}
-            className="lg:col-span-7 space-y-4 mt-0 sm:mt-12 lg:mt-0 pl-4 sm:pl-6 md:pl-6 lg:pl-[50px] pr-4 sm:pr-6 md:pr-6 lg:pr-[45px]"
-          >
-            <span
-              className="block w-fit text-[16px] sm:text-[18px] lg:text-[16px] uppercase tracking-widest text-[#5B3231]/80 font-normal"
-              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-            >
-              Giving Back
-            </span>
-            <h2
-              className="font-serif text-[26px] sm:text-[30px] lg:text-[36px] text-[#000000]/80 leading-tight"
-              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-            >
-              Beyond Travel, <br /> We Create Impact
-            </h2>
-            <p
-              className="text-[15px] sm:text-[16px] font-serif text-[#000000]/70 leading-relaxed pt-[30px]"
-              style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-            >
-              A love for people, the world, humanity, and the environment, along{" "}
-              <br className="hidden sm:inline" />
-              with a thoughtful perspective on money and generosity.
-            </p>
-
-            <div className="pt-5 divide-y divide-slate-400/50 border-b border-slate-400/50">
-              {items.map((item, index) => (
-                <div key={index} className="py-6">
-                  <button
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                    aria-expanded={openIndex === index}
-                    className="w-full flex items-center justify-between text-left font-serif text-[15px] sm:text-[16px] font-medium text-[#5B3231]/70 gap-4"
-                    style={{
-                      fontFamily: "var(--font-merriweather), Georgia, serif",
-                    }}
-                  >
-                    <span>{item.title}</span>
-                    <span className="relative w-4 h-4 shrink-0">
-                      <Plus
-                        className={`w-4 h-4 text-[#5B3231]/70 absolute inset-0 transition-transform duration-300 ease-out ${
-                          openIndex === index
-                            ? "rotate-90 opacity-0"
-                            : "rotate-0 opacity-100"
-                        }`}
-                      />
-                      <Minus
-                        className={`w-4 h-4 text-[#5B3231]/70 absolute inset-0 transition-transform duration-300 ease-out ${
-                          openIndex === index
-                            ? "rotate-0 opacity-100"
-                            : "-rotate-90 opacity-0"
-                        }`}
-                      />
-                    </span>
-                  </button>
-                  <div
-                    className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-opacity motion-reduce:duration-200 ${
-                      openIndex === index
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p
-                        className="mt-2 text-[15px] sm:text-[16px] text-black/70 font-serif leading-relaxed"
-                        style={{
-                          fontFamily:
-                            "var(--font-merriweather), Georgia, serif",
-                        }}
-                      >
-                        {item.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
         </div>
-      </section>
-    </FadeIn>
+      </div>
+    </section>
   );
 }
 
@@ -1538,118 +1445,116 @@ function TestimonialDots() {
 
 function TestimonialsSection() {
   return (
-    <FadeIn>
-      <section className="relative py-24 pl-4 sm:pl-6 md:pl-[50px] pr-4 sm:pr-6 md:pr-[50px] bg-[#f4f2ed] text-slate-800 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{
-            backgroundImage:
-              "url('/fonts/images/ChatGPT Image May 5, 2026, 05_19_17 PM.webp')",
-          }}
-        />
-        <div className="relative space-y-12">
-          <FadeIn className="text-center max-w-[700px] mx-auto space-y-3">
-            <span
-              className="block w-fit mx-auto text-[16px] uppercase tracking-widest text-[#8B5A52] font-normal"
-              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-            >
-              Happy Travelers
-            </span>
-            <h2
-              className="font-serif text-[36px] text-slate-900"
-              style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
-            >
-              In Their Own Words
-            </h2>
-            <p
-              className="text-[16px] font-serif text-slate-600 leading-relaxed"
-              style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-            >
-              Nothing speaks louder than the words of our happy guests and their
-              unforgettable
-              <br></br>
-              Bhutan experiences.
-            </p>
-          </FadeIn>
-
-          {/* Review Card */}
-          <FadeIn
-            delay={150}
-            className="bg-white/50 max-w-[1220px] mx-auto p-8 md:p-16 rounded-sm shadow-sm relative text-center"
+    <section className="relative py-24 px-6 md:pl-[50px] md:pr-[50px] bg-[#f4f2ed] text-slate-800 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-50"
+        style={{
+          backgroundImage:
+            "url('/fonts/images/ChatGPT Image May 5, 2026, 05_19_17 PM.webp')",
+        }}
+      />
+      <div className="relative space-y-12">
+        <FadeIn className="text-center max-w-[700px] mx-auto space-y-3">
+          <span
+            className="block w-fit mx-auto text-[16px] uppercase tracking-widest text-[#8B5A52] font-normal"
+            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
           >
-            <Carousel
-              opts={{ duration: 75 } as any}
-              autoplay={true}
-              autoplayInterval={5000}
+            Happy Travelers
+          </span>
+          <h2
+            className="font-serif text-[36px] text-slate-900"
+            style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
+          >
+            In Their Own Words
+          </h2>
+          <p
+            className="text-[16px] font-serif text-slate-600 leading-relaxed"
+            style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
+          >
+            Nothing speaks louder than the words of our happy guests and their
+            unforgettable
+            <br></br>
+            Bhutan experiences.
+          </p>
+        </FadeIn>
+
+        {/* Review Card */}
+        <FadeIn
+          delay={150}
+          className="bg-white/50 max-w-[1220px] mx-auto p-8 md:p-16 rounded-sm shadow-sm relative text-center"
+        >
+          <Carousel
+            opts={{ duration: 75 } as any}
+            autoplay={true}
+            autoplayInterval={5000}
+          >
+            <span
+              className="block text-[190px] text-[#8B5A52]/30 mb-[-70] mx-auto leading-none font-merriweather"
+              style={{
+                fontFamily: "var(--font-merriweather), Georgia, serif",
+                fontStyle: "light",
+                fontWeight: "300",
+              }}
             >
-              <span
-                className="block text-[190px] text-[#8B5A52]/30 mb-[-70] mx-auto leading-none font-merriweather"
-                style={{
-                  fontFamily: "var(--font-merriweather), Georgia, serif",
-                  fontStyle: "light",
-                  fontWeight: "300",
-                }}
-              >
-                &ldquo;
-              </span>
+              &ldquo;
+            </span>
 
-              <CarouselContent className="-ml-4">
-                {TESTIMONIALS.map((t) => (
-                  <CarouselItem key={t.name}>
-                    <div
-                      className="space-y-4 font-serif text-[16px] text-slate-700 leading-relaxed max-w-2xl mx-auto"
-                      style={{
-                        fontFamily: "var(--font-merriweather), Georgia, serif",
-                      }}
-                    >
-                      {t.paragraphs.map((p, i) => (
-                        <p key={i}>{p}</p>
-                      ))}
+            <CarouselContent className="-ml-4">
+              {TESTIMONIALS.map((t) => (
+                <CarouselItem key={t.name}>
+                  <div
+                    className="space-y-4 font-serif text-[16px] text-slate-700 leading-relaxed max-w-2xl mx-auto"
+                    style={{
+                      fontFamily: "var(--font-merriweather), Georgia, serif",
+                    }}
+                  >
+                    {t.paragraphs.map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
+
+                  <div className="pt-10 flex items-center justify-center gap-3">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-300 shrink-0">
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-
-                    <div className="pt-10 flex items-center justify-center gap-3">
-                      <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-300 shrink-0">
-                        <img
-                          src={t.image}
-                          alt={t.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="text-left">
-                        <p
-                          className="font-serif font-bold text-[#5B3231] text-[14px]"
-                          style={{
-                            fontFamily: "var(--font-seasons), Georgia, serif",
-                          }}
-                        >
-                          {t.name}
-                        </p>
-                        <p
-                          className="font-serif font-bold text-[#5B3231] text-[14px]"
-                          style={{
-                            fontFamily: "var(--font-seasons), Georgia, serif",
-                          }}
-                        >
-                          {t.location}
-                        </p>
-                      </div>
+                    <div className="text-left">
+                      <p
+                        className="font-serif font-bold text-[#5B3231] text-[14px]"
+                        style={{
+                          fontFamily: "var(--font-seasons), Georgia, serif",
+                        }}
+                      >
+                        {t.name}
+                      </p>
+                      <p
+                        className="font-serif font-bold text-[#5B3231] text-[14px]"
+                        style={{
+                          fontFamily: "var(--font-seasons), Georgia, serif",
+                        }}
+                      >
+                        {t.location}
+                      </p>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
 
-              <CarouselNavigation
-                className="hidden md:flex absolute inset-x-0 top-1/2 -translate-y-1/2 justify-between px-1"
-                classNameButton="relative overflow-hidden border border-[#8B5A52] bg-transparent text-[#8B5A52] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-white"
-                alwaysShow
-              />
+            <CarouselNavigation
+              className="hidden md:flex absolute inset-x-0 top-1/2 -translate-y-1/2 justify-between px-1"
+              classNameButton="relative overflow-hidden border border-[#8B5A52] bg-transparent text-[#8B5A52] *:relative *:z-10 *:stroke-[#8B5A52] before:absolute before:inset-0 before:rounded-full before:bg-[#8B5A52] before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition-[transform,opacity] before:duration-300 before:ease-out hover:*:stroke-white"
+              alwaysShow
+            />
 
-              <TestimonialDots />
-            </Carousel>
-          </FadeIn>
-        </div>
-      </section>
-    </FadeIn>
+            <TestimonialDots />
+          </Carousel>
+        </FadeIn>
+      </div>
+    </section>
   );
 }
 

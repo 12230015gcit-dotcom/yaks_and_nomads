@@ -67,7 +67,7 @@ export default function Header() {
           className="relative flex-1 min-w-0 flex items-center justify-end sm:justify-center h-9 sm:h-11 md:h-14"
         >
           <span
-            className="whitespace-nowrap text-[clamp(18px,5.5vw,21px)] md:text-[20px] tracking-widest font-semibold text-[#5B3231]"
+            className="whitespace-nowrap text-[clamp(18px,5.5vw,2px)] md:text-[20px] tracking-widest font-semibold text-[#5B3231]"
             style={{ fontFamily: "var(--font-seasons), Georgia, serif" }}
           >
             Yaks & Nomads

@@ -844,17 +844,21 @@ function TripOverviewSection({ tour }: { tour: (typeof TOURS)[number] }) {
               color: "rgba(91, 50, 49, 0.7)",
             }}
           >
-            <div className="py-4 flex items-center border-t border-black/30">
-              <span className="w-[300px] shrink-0">Duration</span>
-              <span className="font-medium">16 Days / 15 Nights</span>
+            <div className="py-4 flex items-center justify-between gap-4 border-t border-black/30">
+              <span className="shrink-0">Duration</span>
+              <span className="font-medium text-right">
+                16 Days / 15 Nights
+              </span>
             </div>
-            <div className="py-4 flex items-center">
-              <span className="w-[300px] shrink-0">Next Dates</span>
-              <span className="font-medium">11 – 16 October, 2026</span>
+            <div className="py-4 flex items-center justify-between gap-4">
+              <span className="shrink-0">Next Dates</span>
+              <span className="font-medium text-right">
+                11 – 16 October, 2026
+              </span>
             </div>
-            <div className="py-4 flex items-center border-b border-black/30">
-              <span className="w-[300px] shrink-0">Physical Rating</span>
-              <span className="font-medium">Challenging</span>
+            <div className="py-4 flex items-center justify-between gap-4 border-b border-black/30">
+              <span className="shrink-0">Physical Rating</span>
+              <span className="font-medium text-right">Challenging</span>
             </div>
           </div>
           <a
