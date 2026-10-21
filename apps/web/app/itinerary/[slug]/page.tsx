@@ -17,7 +17,8 @@ const TOURS = [
   {
     slug: "royal-highland-festival",
     title: "The Royal Highland Festival",
-    heroImage: "/fonts/images/RoyalHighlandFestivalHero.webp",
+    heroImage:
+      "/images/itinerary/royal_highland_festival/RoyalHighlandFestivalHero.webp",
     description: [
       "Your adventure begins with a hike to the iconic Tiger's Nest Monastery, which serves as an acclimatisation trek before you embark on the Laya–Gasa Trek. The Laya–Gasa Trek is one of Bhutan's most spectacular long-distance treks, following ancient trails along the Tibetan border and showcasing some of the most pristine and untouched Himalayan landscapes.",
       "In Laya, you will experience the vibrant Royal Highland Festival, a unique celebration of Bhutan's nomadic culture featuring traditional music, dances, yak exhibitions, and other cultural performances. After descending to the lower valleys, you will visit Punakha and Thimphu, where you can explore Bhutan's rich history, culture, and architectural heritage.",
@@ -137,41 +138,41 @@ const TOURS = [
     ],
     galleryImages: [
       {
-        src: "/fonts/images/HorseRoyal.webp",
+        src: "/images/itinerary/royal_highland_festival/HorseRoyal.webp",
         alt: "Mountain landscape with grazing horses",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/RoyalCop.webp",
+        src: "/images/itinerary/royal_highland_festival/RoyalCop.webp",
         alt: "Yak caravan on trail",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/NomadsRoyal.webp",
+        src: "/images/itinerary/royal_highland_festival/NomadsRoyal.webp",
         alt: "Trekkers on mountain ridge",
         objectPosition: "center",
       },
     ],
     featureImages: [
       {
-        src: "/fonts/images/RoyalCop.webp",
+        src: "/images/itinerary/royal_highland_festival/RoyalCop.webp",
         alt: "Highland nomads",
         style: undefined,
       },
       {
-        src: "/fonts/images/RoyalCop.webp",
+        src: "/images/itinerary/royal_highland_festival/RoyalCop.webp",
         alt: "Highland festival with yaks",
         style: undefined,
       },
     ],
     itinerarySidebarImages: [
       {
-        src: "/fonts/images/RoyalCop.webp",
+        src: "/images/itinerary/royal_highland_festival/RoyalCop.webp",
         alt: "Highland nomads",
         style: undefined,
       },
       {
-        src: "/fonts/images/RoyalCop.webp",
+        src: "/images/itinerary/royal_highland_festival/RoyalCop.webp",
         alt: "Highland festival with yaks",
         style: undefined,
       },
@@ -181,7 +182,8 @@ const TOURS = [
   {
     slug: "western-bhutan-highlights-tour",
     title: "Western Bhutan Highlights Tour",
-    heroImage: "/fonts/images/likhit-dixit-Ow5Gb0Y-ktI-unsplash.webp",
+    heroImage:
+      "/images/itinerary/western_bhutan_highlights_tour/likhit-dixit-Ow5Gb0Y-ktI-unsplash.webp",
     description: [
       "Discover the highlights of Bhutan on this immersive journey through Thimphu, Punakha, and the scenic Phobjikha Valley. Meet local people, explore sacred temples and historic landmarks, and take in breathtaking mountain landscapes while experiencing Bhutan's rich culture and spiritual heritage. The journey concludes with a memorable hike to the iconic Tiger's Nest Monastery, dramatically perched on a cliffside above the Paro Valley.",
     ],
@@ -254,41 +256,41 @@ const TOURS = [
     ],
     galleryImages: [
       {
-        src: "/fonts/images/West-view_DSC06713 (1).webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/West-view_DSC06713 (1).webp",
         alt: "Paro Dzong",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/nils-leonhardt-rCnHOzY-Ji8-unsplash.webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/nils-leonhardt-rCnHOzY-Ji8-unsplash.webp",
         alt: "Bhutan landscape",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/pema-gyamtsho-KMsMgvb4_M0-unsplash.webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/pema-gyamtsho-KMsMgvb4_M0-unsplash.webp",
         alt: "Mountain scenery",
         objectPosition: "center",
       },
     ],
     featureImages: [
       {
-        src: "/fonts/images/raul-taciu-VJpJFnMhLZ0-unsplash.webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/raul-taciu-VJpJFnMhLZ0-unsplash.webp",
         alt: "Bhutan landscape",
         style: undefined,
       },
       {
-        src: "/fonts/images/Punakha by Marcus Westberg31 (2).webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/Punakha by Marcus Westberg31 (2).webp",
         alt: "Punakha valley",
         style: { objectPosition: "40% center" },
       },
     ],
     itinerarySidebarImages: [
       {
-        src: "/fonts/images/premium_photo-1668110864450-48a6591c3a22.webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/premium_photo-1668110864450-48a6591c3a22.webp",
         alt: "Bhutan landscape",
         style: undefined,
       },
       {
-        src: "/fonts/images/premium_photo-1669613233557-1676c121fe73.webp",
+        src: "/images/itinerary/western_bhutan_highlights_tour/premium_photo-1669613233557-1676c121fe73.webp",
         alt: "Bhutan landscape",
         style: undefined,
       },
@@ -298,7 +300,8 @@ const TOURS = [
   {
     slug: "cultural-exploration-day-hikes",
     title: "Cultural Exploration Through Day Hikes",
-    heroImage: "/fonts/images/sam-power-6aP9EGsYE3s-unsplash.webp",
+    heroImage:
+      "/images/itinerary/cultural_exploration/sam-power-6aP9EGsYE3s-unsplash.webp",
     imagePosition: "20% center",
     description: [
       "This journey takes you through the cultural heart of western Bhutan, including Paro, Punakha, Thimphu, and the beautiful Haa Valley. Along the way, you will visit magnificent dzongs, sacred temples, and traditional villages while enjoying scenic hikes to Zuri Dzong, Khamsum Yulley Namgyal Chorten, Lungchutse Monastery, Tango and Cheri Monasteries, and Kila Goemba Nunnery. The tour concludes with a hike to the iconic Tiger's Nest Monastery, Bhutan's most revered and breathtaking landmark.",
@@ -388,41 +391,41 @@ const TOURS = [
     ],
     galleryImages: [
       {
-        src: "/fonts/images/Trongsa by Matt Dutile10.webp",
+        src: "/images/itinerary/cultural_exploration/Trongsa by Matt Dutile10.webp",
         alt: "Trongsa Monastery",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/Marcus Westberg Dochula Pass 2023_16.webp",
+        src: "/images/itinerary/cultural_exploration/Marcus Westberg Dochula Pass 2023_16.webp",
         alt: "Mountain pass views",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/Marcus Westberg Bumthang 20235 (1).webp",
+        src: "/images/itinerary/cultural_exploration/Marcus Westberg Bumthang 20235 (1).webp",
         alt: "Bumthang valley",
         objectPosition: "center",
       },
     ],
     featureImages: [
       {
-        src: "/fonts/images/Trongsa by Matt Dutile10.webp",
+        src: "/images/itinerary/cultural_exploration/Trongsa by Matt Dutile10.webp",
         alt: "Trongsa Monastery",
         style: undefined,
       },
       {
-        src: "/fonts/images/Marcus Westberg Dochula Pass 2023_16.webp",
+        src: "/images/itinerary/cultural_exploration/Marcus Westberg Dochula Pass 2023_16.webp",
         alt: "Mountain pass views",
         style: undefined,
       },
     ],
     itinerarySidebarImages: [
       {
-        src: "/fonts/images/Punakha by Marcus Westberg43.webp",
+        src: "/images/itinerary/cultural_exploration/Punakha by Marcus Westberg43.webp",
         alt: "Punakha valley",
         style: undefined,
       },
       {
-        src: "/fonts/images/rohit-arora-wK5Wt1KAdyA-unsplash.webp",
+        src: "/images/itinerary/cultural_exploration/rohit-arora-wK5Wt1KAdyA-unsplash.webp",
         alt: "Bhutan landscape",
         style: undefined,
       },
@@ -432,7 +435,7 @@ const TOURS = [
   {
     slug: "eastern-bhutan-untouched-journey",
     title: "Eastern Bhutan: The Untouched Journey",
-    heroImage: "/fonts/images/img (12 of 19).webp",
+    heroImage: "/images/itinerary/eastern_bhutan/img (12 of 19).webp",
     description: [
       "Enter Bhutan overland through Samdrup Jongkhar and journey across the country's eastern and central regions, experiencing authentic village life in Trashigang, Radhi, and Merak, home of the unique Brokpa community. Continue through Mongar to Bumthang, then visit the serene Phobjikha Valley and historic Punakha. Explore the cultural attractions of Thimphu and the peaceful Haa Valley before returning to Paro via the scenic Chele La Pass. The journey culminates with a memorable hike to the iconic Tiger's Nest Monastery.",
     ],
@@ -550,41 +553,41 @@ const TOURS = [
     ],
     galleryImages: [
       {
-        src: "/fonts/images/merak women.webp",
+        src: "/images/itinerary/eastern_bhutan/merak women.webp",
         alt: "Traditional weaving",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/passang-tobgay-lIQyVxYBwVQ-unsplash.webp",
+        src: "/images/itinerary/eastern_bhutan/passang-tobgay-lIQyVxYBwVQ-unsplash.webp",
         alt: "Eastern Bhutan landscape",
         objectPosition: "center",
       },
       {
-        src: "/fonts/images/Ogyen Choling by Matt Dutile14 (1).webp",
+        src: "/images/itinerary/eastern_bhutan/Ogyen Choling by Matt Dutile14 (1).webp",
         alt: "Ogyen Choling Palace",
         objectPosition: "center",
       },
     ],
     featureImages: [
       {
-        src: "/fonts/images/merak women.webp",
+        src: "/images/itinerary/eastern_bhutan/merak women.webp",
         alt: "Traditional weaving",
         style: undefined,
       },
       {
-        src: "/fonts/images/mongar dzongkhag teaser.webp",
+        src: "/images/itinerary/eastern_bhutan/mongar dzongkhag teaser.webp",
         alt: "Mongar Dzong",
         style: undefined,
       },
     ],
     itinerarySidebarImages: [
       {
-        src: "/fonts/images/passang-tobgay-K6-A_4kBPcQ-unsplash.webp",
+        src: "/images/itinerary/eastern_bhutan/passang-tobgay-K6-A_4kBPcQ-unsplash.webp",
         alt: "Eastern Bhutan landscape",
         style: undefined,
       },
       {
-        src: "/fonts/images/Snowman Race28.webp",
+        src: "/images/itinerary/eastern_bhutan/Snowman Race28.webp",
         alt: "Eastern Bhutan landscape",
         style: undefined,
       },
@@ -594,7 +597,7 @@ const TOURS = [
   {
     slug: "jumolhari-trek",
     title: "Jumolhari Trek",
-    heroImage: "/fonts/images/Snowman Race38 (2).webp",
+    heroImage: "/images/itinerary/jumolhari_trek/Snowman Race38 (2).webp",
     imagePosition: "30% center",
     description: [
       "It begins in Paro with an acclimatization hike to the iconic Tiger's Nest Monastery, a sacred cliffside site associated with Guru Rinpoche. The journey then transitions into the wilderness of Jigme Dorji Wangchuck National Park, where the trail follows river valleys through forests, alpine meadows, and remote highland settlements, offering insight into Bhutan's traditional lifestyle. As the trek progresses, you reach the stunning Jangothang campsite with breathtaking views of Mount Jumolhari and surrounding peaks, followed by a rest day for acclimatization. The route then becomes more adventurous, crossing Yeli La Pass at 4,820 meters before descending through lush forests and scenic valleys. The journey concludes at Dodena with a drive to Thimphu, providing a perfect balance of cultural exploration, natural beauty, and rewarding physical challenge.",
@@ -694,41 +697,41 @@ const TOURS = [
     ],
     galleryImages: [
       {
-        src: "/fonts/images/sagar-madha-QCjDp4uphf4-unsplash.webp",
+        src: "/images/itinerary/jumolhari_trek/sagar-madha-QCjDp4uphf4-unsplash.webp",
         alt: "Mount Jumolhari",
         objectPosition: "30% 70%",
       },
       {
-        src: "/fonts/images/sam-power-6aP9EGsYE3s-unsplash.webp",
+        src: "/images/itinerary/jumolhari_trek/sam-power-6aP9EGsYE3s-unsplash.webp",
         alt: "Yak herders",
         objectPosition: "60% center",
       },
       {
-        src: "/fonts/images/Snowman Race6.webp",
+        src: "/images/itinerary/jumolhari_trek/Snowman Race6.webp",
         alt: "Alpine meadows",
         objectPosition: "20% center",
       },
     ],
     featureImages: [
       {
-        src: "/fonts/images/Snowman Race36.webp",
+        src: "/images/itinerary/jumolhari_trek/Snowman Race36.webp",
         alt: "Mountain trek",
         style: { objectPosition: "30% center" },
       },
       {
-        src: "/fonts/images/sonu-agvan-DEWefZDJXPE-unsplash.webp",
+        src: "/images/itinerary/jumolhari_trek/sonu-agvan-DEWefZDJXPE-unsplash.webp",
         alt: "Trekking landscape",
         style: { objectPosition: "30% center" },
       },
     ],
     itinerarySidebarImages: [
       {
-        src: "/fonts/images/TrekkingRoyal.webp",
+        src: "/images/itinerary/jumolhari_trek/TrekkingRoyal.webp",
         alt: "Trekking landscape",
         style: undefined,
       },
       {
-        src: "/fonts/images/thedronebook-TourismBoardBhutan-200A6604.webp",
+        src: "/images/itinerary/jumolhari_trek/thedronebook-TourismBoardBhutan-200A6604.webp",
         alt: "Bhutan landscape",
         style: undefined,
       },

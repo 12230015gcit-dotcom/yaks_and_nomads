@@ -20,7 +20,7 @@ function FaqHero() {
     <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/fonts/images/FaqHero.webp')" }}
+        style={{ backgroundImage: "url('/images/faq/FaqHero.webp')" }}
       />
 
       <div className="absolute inset-0 bg-black/20" />

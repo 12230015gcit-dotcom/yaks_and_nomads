@@ -159,7 +159,9 @@ function ContactHero() {
     <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] bg-slate-900 flex items-center justify-center text-center text-white overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/fonts/images/ContactUsHero.webp')` }}
+        style={{
+          backgroundImage: `url('/images/contact/ContactUsHero.webp')`,
+        }}
       />
       <div className="absolute inset-0 bg-black/20" />
 

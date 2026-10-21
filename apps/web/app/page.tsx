@@ -25,16 +25,16 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const PRELOAD_IMAGES = [
-  "/fonts/images/RedPanda.webp",
-  "/fonts/images/clay%20pot.webp",
-  "/fonts/images/GameofArchery.webp",
-  "/fonts/images/monastry.webp",
-  "/fonts/images/stamps.webp",
-  "/fonts/images/Astrology.webp",
-  "/fonts/images/Ema.webp",
-  "/fonts/images/Yoga.webp",
-  "/fonts/images/stoneBath.webp",
-  "/fonts/images/village.webp",
+  "/images/home/givingBack/first photo.jpg",
+  "/images/home/givingBack/Overlap%20Photo.jpg",
+  "/images/home/ourAdvantage/Game of Archery.jpg",
+  "/images/home/ourAdvantage/monastry.webp",
+  "/images/home/ourAdvantage/Make own stamp.jpg",
+  "/images/home/ourAdvantage/Astrology.webp",
+  "/images/home/ourAdvantage/Ema.webp",
+  "/images/home/ourAdvantage/Yoga & Meditation.jpg",
+  "/images/home/ourAdvantage/Hot stone Bath.jpg",
+  "/images/home/ourAdvantage/Village stay.jpg",
 ];
 
 function preloadImages(srcs: string[]) {
@@ -47,17 +47,17 @@ function preloadImages(srcs: string[]) {
 // --- Section 1: Hero ---
 const HERO_TAGLINES = [
   {
-    image: "/fonts/images/heroImage/hero1.jpg",
+    image: "/images/home/hero/hero1.jpg",
     line1: "Bhutan Travel: Step Into the",
     line2: " Kingdom of Happiness.",
   },
   {
-    image: "/fonts/images/heroImage/hero2.jpg",
+    image: "/images/home/hero/hero2.jpg",
     line1: "Your Once-in-a-Lifetime Bhutan ",
     line2: "Journey,100% Tailored to You.",
   },
   {
-    image: "/fonts/images/heroImage/hero3.jpg",
+    image: "/images/home/hero/hero3.jpg",
     line1: "Travel Slowly. Connect Deeply.",
     line2: "Experience Bhutan. Take Memories Home.",
   },
@@ -196,9 +196,9 @@ function HeroSection() {
 
 // --- Section 2: Adventure Awaits ---
 const ABOUT_SLIDES = [
-  { image: "/fonts/images/AdventuresAwaits1.webp", alt: "Bhutan landscape" },
-  { image: "/fonts/images/AdventuresAwaits2.webp", alt: "Bhutan landscape" },
-  { image: "/fonts/images/AdventuresAwaits3.webp", alt: "Bhutan landscape" },
+  { image: "/images/AdventuresAwaits1.webp", alt: "Bhutan landscape" },
+  { image: "/images/AdventuresAwaits2.webp", alt: "Bhutan landscape" },
+  { image: "/images/AdventuresAwaits3.webp", alt: "Bhutan landscape" },
 ];
 
 function AdventureCarousel() {
@@ -338,7 +338,8 @@ function AboutSection() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-50 will-change-transform"
         style={{
-          backgroundImage: "url('/fonts/images/adventure_awaitsbg.webp')",
+          backgroundImage:
+            "url('/images/home/adventureAwaits/adventure_awaitsbg.webp')",
           transform: "translateZ(0)",
         }}
       />
@@ -423,7 +424,7 @@ function AboutSection() {
         "
                 >
                   <img
-                    src="/fonts/images/adventureAwaits/bigPhoto.jpg"
+                    src="/images/home/adventureAwaits/bigPhoto.jpg"
                     alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
                     className="block h-full w-full object-cover"
                     loading="lazy"
@@ -444,7 +445,7 @@ function AboutSection() {
         "
                 >
                   <img
-                    src="/fonts/images/adventureAwaits/smallPhoto.jpg"
+                    src="/images/home/adventureAwaits/smallPhoto.jpg"
                     alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
                     className="block h-full w-full object-cover"
                     loading="lazy"
@@ -472,7 +473,7 @@ function AboutSection() {
               {/* Large square image */}
               <div className="aspect-square w-full overflow-hidden rounded-one shadow-lg">
                 <img
-                  src="/fonts/images/adventureAwaits/bigPhoto.jpg"
+                  src="/images/adventureAwaits/bigPhoto.jpg"
                   alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
                   className="block h-full w-full object-cover"
                   loading="lazy"
@@ -482,7 +483,7 @@ function AboutSection() {
               {/* Landscape image */}
               <div className="aspect-[1.334] w-full overflow-hidden rounded-one shadow-xl">
                 <img
-                  src="/fonts/images/adventureAwaits/smallPhoto.jpg"
+                  src="/images/adventureAwaits/smallPhoto.jpg"
                   alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
                   className="block h-full w-full object-cover"
                   loading="lazy"
@@ -498,49 +499,49 @@ function AboutSection() {
 // --- Section 3: Out-Of-The-Box Experiences ---
 const EXPERIENCES = [
   {
-    image: "/fonts/images/ourAdvantage/Game of Archery.jpg",
+    image: "/images/home/ourAdvantage/Game of Archery.jpg",
     title: "A Game of Archery",
     description:
       "Try your hand at this traditional sport and experience the thrill of hitting the target.",
   },
   {
-    image: "/fonts/images/ourAdvantage/monastry.webp",
+    image: "/images/home/ourAdvantage/monastry.webp",
     title: "Monastery Stay",
     description:
       "Step into the shoes of monks—join prayer sessions, sleep in their modest quarters, and share meals with them.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Make own stamp.jpg",
+    image: "/images/home/ourAdvantage/Make own stamp.jpg",
     title: "Make Your Own Stamps",
     description:
       "Imagine the joy of having your photo on a stamp and sending a postcard to your loved ones.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Astrology.webp",
+    image: "/images/home/ourAdvantage/Astrology.webp",
     title: "Astrology Reading",
     description:
       "Consult a Buddhist astrologer for insights into your past life and guidance for your future.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Ema.webp",
+    image: "/images/home/ourAdvantage/Ema.webp",
     title: "Learn to Cook Ema Datshi",
     description:
       "Ema Datshi, a chili and cheese dish, is the national dish of the country. If prepared correctly, you will enjoy it.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Yoga & Meditation.jpg",
+    image: "/images/home/ourAdvantage/Yoga & Meditation.jpg",
     title: "Yoga & Meditation",
     description:
       "Whether you are an intermediate or an avid practitioner, our trained yoga and meditation teacher will guide you.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Hot stone Bath.jpg",
+    image: "/images/home/ourAdvantage/Hot stone Bath.jpg",
     title: "Hot Stone Bath",
     description:
       "Pamper yourself with a traditional hot stone bath at the end of your day hike.",
   },
   {
-    image: "/fonts/images/ourAdvantage/Village stay.jpg",
+    image: "/images/home/ourAdvantage/Village stay.jpg",
     title: "Village Stay",
     description:
       "Enjoy engaging conversations with your host, farm-to-table meals, warm hospitality, and much more.",
@@ -665,7 +666,7 @@ function FeaturedSection() {
       <div
         className="absolute inset-0 bg-cover bg-bottom will-change-transform"
         style={{
-          backgroundImage: `url('/fonts/images/landingRoyalhighlandfestivalsection.webp')`,
+          backgroundImage: `url('/images/home/royalHighLand_bg.webp')`,
           transform: "translateZ(0)",
         }}
       />
@@ -812,7 +813,7 @@ const toursData: Tour[] = [
     subtitle: "PRIVATE JOURNEYS",
     description:
       "Explore Bhutan’s cultural highlights in Thimphu, Punakha, and Phobjikha Valley, discovering sacred sites, historic landmarks, local traditions, and stunning mountain landscapes. The journey culminates with a hike to the iconic Tiger’s Nest Monastery.",
-    image: "/fonts/images/Thimphu.webp",
+    image: "/images/home/topRatedTours/Thimphu.webp",
     slug: "western-bhutan-highlights-tour",
     bgColor: "#E7E7E7",
   },
@@ -822,7 +823,7 @@ const toursData: Tour[] = [
     subtitle: "PRIVATE JOURNEYS",
     description:
       "Enter Bhutan through Samdrup Jongkhar and explore its eastern and central regions, discovering village life and the unique Brokpa culture of Merak. Continue through Mongar and Bumthang to Phobjikha, Punakha, Thimphu, and Haa Valley, before returning to Paro via Chele La Pass.",
-    image: "/fonts/images/ParoDzong.webp",
+    image: "/images/home/topRatedTours/ParoDzong.webp",
     slug: "eastern-bhutan-untouched-journey",
     bgColor: "#CFCFCF",
   },
@@ -832,7 +833,7 @@ const toursData: Tour[] = [
     subtitle: "PRIVATE JOURNEYS",
     description:
       "Explore the cultural heart of western Bhutan, from Paro and Punakha to Thimphu and Haa Valley. Discover historic dzongs, sacred monasteries, villages, and scenic hiking trails, culminating in a memorable hike to the Tiger’s Nest Monastery.",
-    image: "/fonts/images/Hiking.webp",
+    image: "/images/home/topRatedTours/Hiking.webp",
     slug: "cultural-exploration-day-hikes",
     bgColor: "#B6B6B6",
   },
@@ -842,7 +843,7 @@ const toursData: Tour[] = [
     subtitle: "PRIVATE JOURNEYS",
     description:
       "Trek from Paro’s Tiger’s Nest through Jigme Dorji Wangchuck National Park, crossing remote landscapes and the 4,820-meter Yeli La Pass, with stunning views of Mount Jumolhari. A thrilling journey combining Himalayan wilderness, culture, and adventure.",
-    image: "/fonts/images/Trek.webp",
+    image: "/images/home/topRatedTours/Trek.webp",
     slug: "jumolhari-trek",
     bgColor: "#9E9E9E",
   },
@@ -1004,7 +1005,7 @@ function ToursSection() {
           }}
         >
           <img
-            src="/fonts/images/logo/logo_only.webp"
+            src="/images/global/logo_only.webp"
             alt=""
             className="w-[1459px] h-[1275px] object-contain"
           />
@@ -1254,7 +1255,7 @@ function ImpactSection() {
         <FadeIn className="hidden lg:block lg:col-span-5">
           <div className="w-3/4 aspect-[3/4] overflow-hidden">
             <img
-              src="/fonts/images/footerImage/first photo.jpg"
+              src="/images/home/givingBack/first photo.jpg"
               alt="Artisan at work"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -1264,7 +1265,7 @@ function ImpactSection() {
 
           <div className="w-3/4 aspect-[4/3] overflow-hidden ml-auto mr-10 -mt-30">
             <img
-              src="/fonts/images/footerImage/Overlap Photo.jpg"
+              src="/images/home/givingBack/Overlap Photo.jpg"
               alt="Mask carving"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -1357,7 +1358,7 @@ function ImpactSection() {
           <FadeIn>
             <div className="aspect-[3/4] w-full overflow-hidden">
               <img
-                src="/fonts/images/footerImage/first photo.jpg"
+                src="/images/footerImage/first photo.jpg"
                 alt="Artisan at work"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -1369,7 +1370,7 @@ function ImpactSection() {
           <FadeIn delay={150}>
             <div className="aspect-[4/3] w-full overflow-hidden">
               <img
-                src="/fonts/images/footerImage/Overlap Photo.jpg"
+                src="/images/footerImage/Overlap Photo.jpg"
                 alt="Mask carving"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -1386,7 +1387,7 @@ function ImpactSection() {
 // --- Section 8: Testimonials ---
 const TESTIMONIALS = [
   {
-    image: "/fonts/images/person/Lisa G.webp",
+    image: "/images/home/testimonials/Lisa G.webp",
     name: "Lisa G",
     location: "United States",
     paragraphs: [
@@ -1395,7 +1396,7 @@ const TESTIMONIALS = [
     ],
   },
   {
-    image: "/fonts/images/person/Pamela W.webp",
+    image: "/images/home/testimonials/Pamela W.webp",
     name: "Pamela W",
     location: "United States",
     paragraphs: [
@@ -1403,7 +1404,7 @@ const TESTIMONIALS = [
     ],
   },
   {
-    image: "/fonts/images/person/Susumu T.webp",
+    image: "/images/home/testimonials/Susumu T.webp",
     name: "Susumu T",
     location: "Japan",
     paragraphs: [
@@ -1412,7 +1413,7 @@ const TESTIMONIALS = [
     ],
   },
   {
-    image: "/fonts/images/person/Linda C.webp",
+    image: "/images/home/testimonials/Linda C.webp",
     name: "Linda C",
     location: "Australia",
     paragraphs: [
@@ -1449,8 +1450,7 @@ function TestimonialsSection() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-50"
         style={{
-          backgroundImage:
-            "url('/fonts/images/ChatGPT Image May 5, 2026, 05_19_17 PM.webp')",
+          backgroundImage: "url('/images/home/testimonials_bg.webp')",
         }}
       />
       <div className="relative space-y-12">

@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="space-y-4">
           <Link href="/">
             <img
-              src="/fonts/images/logo/logo.png"
+              src="/images/global/logo.png"
               alt="Yaks & Nomads"
               className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
               loading="lazy"

@@ -7,19 +7,20 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const ABOUT_IMAGES = [
-  "/fonts/images/AboutUsHero.webp",
-  "/fonts/images/localpersonalefficient.webp",
-  "/fonts/images/logo/White%20Transparent.webp",
-  "/fonts/images/person/IMG_8823.JPG.webp",
-  "/fonts/images/person/Dorji%20Pelzang.webp",
-  "/fonts/images/person/Karma%20Tshewang.jpg.webp",
-  "/fonts/images/person/Karma%20Dechen_1.webp",
-  "/fonts/images/person/Rinchen%20Dorji%20.webp",
-  "/fonts/images/person/Rinzin%20Tsheten%20.webp",
-  "/fonts/images/person/Yonten%20Wangchuk.webp",
-  "/fonts/images/person/Ugyen%20Wangchuk.webp",
-  "/fonts/images/Work%20with%20Us_1.webp",
-  "/fonts/images/Work%20with%20Us.webp",
+  "/images/about/AboutUsHero.webp",
+  "/images/localpersonalefficient.webp",
+  "/images/global/White%20Transparent.webp",
+  "/images/about/localpersonalefficient.webp",
+  "/images/about/team/ceo.webp",
+  "/images/about/team/Dorji%20Pelzang.webp",
+  "/images/about/team/Karma%20Tshewang.jpg.webp",
+  "/images/about/team/Karma%20Dechen_1.webp",
+  "/images/about/team/Rinchen%20Dorji%20.webp",
+  "/images/about/team/Rinzin%20Tsheten%20.webp",
+  "/images/about/team/Yonten%20Wangchuk.webp",
+  "/images/about/team/Ugyen%20Wangchuk.webp",
+  "/images/about/becomePartner/Work with Us_1.webp",
+  "/images/about/becomePartner/Work with Us.webp",
 ];
 
 function preloadImages(srcs: string[]) {
@@ -35,9 +36,9 @@ function AboutHero() {
     <section className="relative h-[60vh] md:h-[85vh] min-h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center md:bg-[position:center_calc(25%)]"
+        className="absolute inset-0 bg-cover bg-center md:bg-bottom"
         style={{
-          backgroundImage: `url('/fonts/images/AboutUsHero.webp')`,
+          backgroundImage: `url('/images/about/AboutUsHero.webp')`,
         }}
       />
 
@@ -108,7 +109,7 @@ function HeartSection() {
         <FadeIn delay={150} className="lg:col-span-6 relative">
           <div className="aspect-[0.86/1] overflow-hidden  lg:h-full">
             <img
-              src="/fonts/images/localpersonalefficient.webp"
+              src="/images/about/localpersonalefficient.webp"
               alt="Bhutanese Nomad"
               className="w-full h-full object-cover"
               decoding="async"
@@ -117,7 +118,7 @@ function HeartSection() {
           {/* Logo Watermark Overlay */}
           <div className="absolute -bottom-30 -left-6 md:-left-25 hidden sm:block bg-white w-full max-w-[340px] aspect-[1.42/1]">
             <img
-              src="/fonts/images/logo/Logo_About Us.png"
+              src="/images/global/Logo_About Us.png"
               className="object-contain"
               loading="lazy"
               decoding="async"
@@ -154,7 +155,7 @@ function CeoSection() {
           <FadeIn className="lg:col-span-5">
             <div className="aspect-[4/5] overflow-hidden">
               <img
-                src="/fonts/images/person/IMG_8823.JPG.webp"
+                src="/images/about/team/ceo.webp"
                 alt="Tsheten Chophel - CEO"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -215,35 +216,35 @@ function AmbassadorsSection() {
   const guides = [
     {
       name: "Dorji Pelzang",
-      image: "/fonts/images/person/Dorji%20Pelzang.webp",
+      image: "/images/about/team/Dorji%20Pelzang.webp",
       position: "50% 25%",
     },
     {
       name: "Karma Tshewang",
-      image: "/fonts/images/person/Karma%20Tshewang.jpg.webp",
+      image: "/images/about/team/Karma%20Tshewang.jpg.webp",
     },
     {
       name: "Karma Dechen",
-      image: "/fonts/images/person/Karma%20Dechen_1.webp",
+      image: "/images/about/team/Karma%20Dechen_1.webp",
       position: "50% 15%",
     },
     {
       name: "Rinchen Dorji",
-      image: "/fonts/images/person/Rinchen%20Dorji%20.webp",
+      image: "/images/about/team/Rinchen%20Dorji%20.webp",
       position: "50% 25%",
     },
     {
       name: "Rinzin Tsheten",
-      image: "/fonts/images/person/Rinzin%20Tsheten%20.webp",
+      image: "/images/about/team/Rinzin%20Tsheten%20.webp",
     },
     {
       name: "Yonten Wangchuk",
-      image: "/fonts/images/person/Yonten%20Wangchuk.webp",
+      image: "/images/about/team/Yonten%20Wangchuk.webp",
       position: "50% 0%",
     },
     {
       name: "Ugyen Wangchuk",
-      image: "/fonts/images/person/Ugyen%20Wangchuk.webp",
+      image: "/images/about/team/Ugyen%20Wangchuk.webp",
       position: "50% 60%",
     },
   ];
@@ -359,7 +360,7 @@ function PartnerSection() {
           <FadeIn className="hidden lg:block lg:col-span-5 relative mb-20 sm:mb-24 lg:mb-0">
             <div className="w-3/4 aspect-3/4 overflow-hidden mx-auto lg:mx-0">
               <img
-                src="/fonts/images/Work with Us_1.webp"
+                src="/images/about/becomePartner/Work with Us_1.webp"
                 alt="Artisan at work"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -368,7 +369,7 @@ function PartnerSection() {
             </div>
             <div className="w-3/4 aspect-4/3 overflow-hidden mx-auto mt-6 relative lg:absolute lg:right-10 lg:-bottom-50 lg:mt-0 lg:mx-0">
               <img
-                src="/fonts/images/Work with Us.webp"
+                src="/images/about/becomePartner/Work with Us.webp"
                 alt="Mask carving"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -457,7 +458,7 @@ function PartnerSection() {
             <FadeIn>
               <div className="aspect-[3/4] w-full overflow-hidden">
                 <img
-                  src="/fonts/images/Work with Us_1.webp"
+                  src="/images/Work with Us_1.webp"
                   alt="Artisan at work"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -469,7 +470,7 @@ function PartnerSection() {
             <FadeIn delay={150}>
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
-                  src="/fonts/images/Work with Us.webp"
+                  src="/images/Work with Us.webp"
                   alt="Mask carving"
                   className="w-full h-full object-cover"
                   loading="lazy"

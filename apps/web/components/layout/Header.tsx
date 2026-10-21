@@ -35,7 +35,7 @@ export default function Header() {
           className="relative flex-1 min-w-0 flex items-center justify-end sm:justify-center h-9 sm:h-11 md:h-14"
         >
           <img
-            src="/fonts/images/logo/logo.png"
+            src="/images/global/logo.png"
             alt="Yaks & Nomads"
             className="h-full w-auto max-w-[30vw] sm:max-w-none object-contain"
           />
