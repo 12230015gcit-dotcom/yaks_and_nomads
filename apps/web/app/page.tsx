@@ -473,7 +473,7 @@ function AboutSection() {
               {/* Large square image */}
               <div className="aspect-square w-full overflow-hidden rounded-one shadow-lg">
                 <img
-                  src="/images/adventureAwaits/bigPhoto.jpg"
+                  src="/images/home/adventureAwaits/bigPhoto.jpg"
                   alt="A peaceful river flows between green and yellow terraced fields, framed by lush mountains."
                   className="block h-full w-full object-cover"
                   loading="lazy"
@@ -483,7 +483,7 @@ function AboutSection() {
               {/* Landscape image */}
               <div className="aspect-[1.334] w-full overflow-hidden rounded-one shadow-xl">
                 <img
-                  src="/images/adventureAwaits/smallPhoto.jpg"
+                  src="/images/home/adventureAwaits/smallPhoto.jpg"
                   alt="A sacred Himalayan monastery set against dramatic mountain scenery above a forested valley."
                   className="block h-full w-full object-cover"
                   loading="lazy"
@@ -1358,7 +1358,7 @@ function ImpactSection() {
           <FadeIn>
             <div className="aspect-[3/4] w-full overflow-hidden">
               <img
-                src="/images/footerImage/first photo.jpg"
+                src="/images/home/givingBack/first photo.jpg"
                 alt="Artisan at work"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -1370,7 +1370,7 @@ function ImpactSection() {
           <FadeIn delay={150}>
             <div className="aspect-[4/3] w-full overflow-hidden">
               <img
-                src="/images/footerImage/Overlap Photo.jpg"
+                src="/images/home/givingBack/Overlap Photo.jpg"
                 alt="Mask carving"
                 className="w-full h-full object-cover"
                 loading="lazy"

@@ -458,7 +458,7 @@ function PartnerSection() {
             <FadeIn>
               <div className="aspect-[3/4] w-full overflow-hidden">
                 <img
-                  src="/images/Work with Us_1.webp"
+                  src="/images/about/becomePartner/Work with Us_1.webp"
                   alt="Artisan at work"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -470,7 +470,7 @@ function PartnerSection() {
             <FadeIn delay={150}>
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
-                  src="/images/Work with Us.webp"
+                  src="/images/about/becomePartner/Work with Us.webp"
                   alt="Mask carving"
                   className="w-full h-full object-cover"
                   loading="lazy"
